@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: b9b51506993c6e84b8f9386873e5ed06
+timeCreated: 1489159898
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: base
+    100002: LArm1
+    100004: LArm2
+    100006: LArmCollarbone
+    100008: LArmPalm
+    100010: LLeg1
+    100012: LLeg2
+    100014: LLegDigit01
+    100016: LLegPalm
+    100018: LLegPlatform
+    100020: Pelvis
+    100022: RArm1
+    100024: RArm2
+    100026: RArmCollarbone
+    100028: RArmPalm
+    100030: Ribcage
+    100032: RLeg1
+    100034: RLeg2
+    100036: RLegPalm
+    100038: RLegPlatform
+    100040: SheKLArmDigit01
+    100042: SheKLArmDigit02
+    100044: SheKLArmDigit03
+    100046: SheKLArmDigit11
+    100048: SheKLArmDigit12
+    100050: SheKLArmDigit13
+    100052: SheKLArmDigit21
+    100054: SheKLArmDigit22
+    100056: SheKLArmDigit23
+    100058: SheKRArmDigit01
+    100060: SheKRArmDigit02
+    100062: SheKRArmDigit03
+    100064: SheKRArmDigit11
+    100066: SheKRArmDigit12
+    100068: SheKRArmDigit13
+    100070: SheKRArmDigit21
+    100072: SheKRArmDigit22
+    100074: SheKRArmDigit23
+    100076: SheKRLegDigit01
+    100078: SphereMan
+    100080: //RootNode
+    100082: Spine
+    400000: base
+    400002: LArm1
+    400004: LArm2
+    400006: LArmCollarbone
+    400008: LArmPalm
+    400010: LLeg1
+    400012: LLeg2
+    400014: LLegDigit01
+    400016: LLegPalm
+    400018: LLegPlatform
+    400020: Pelvis
+    400022: RArm1
+    400024: RArm2
+    400026: RArmCollarbone
+    400028: RArmPalm
+    400030: Ribcage
+    400032: RLeg1
+    400034: RLeg2
+    400036: RLegPalm
+    400038: RLegPlatform
+    400040: SheKLArmDigit01
+    400042: SheKLArmDigit02
+    400044: SheKLArmDigit03
+    400046: SheKLArmDigit11
+    400048: SheKLArmDigit12
+    400050: SheKLArmDigit13
+    400052: SheKLArmDigit21
+    400054: SheKLArmDigit22
+    400056: SheKLArmDigit23
+    400058: SheKRArmDigit01
+    400060: SheKRArmDigit02
+    400062: SheKRArmDigit03
+    400064: SheKRArmDigit11
+    400066: SheKRArmDigit12
+    400068: SheKRArmDigit13
+    400070: SheKRArmDigit21
+    400072: SheKRArmDigit22
+    400074: SheKRArmDigit23
+    400076: SheKRLegDigit01
+    400078: SphereMan
+    400080: //RootNode
+    400082: Spine
+    4300000: SphereMan
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: SphereMan
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 27426e3edbb76d04495a6041be9e54e9,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

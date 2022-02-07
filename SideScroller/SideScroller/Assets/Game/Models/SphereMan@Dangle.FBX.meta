@@ -1,0 +1,308 @@
+fileFormatVersion: 2
+guid: 84a61843ddcf9a74fbf5516b79ad4a3b
+timeCreated: 1488115535
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: base
+    100002: LArm1
+    100004: LArm2
+    100006: LArmCollarbone
+    100008: LArmDigit01
+    100010: LArmDigit02
+    100012: LArmDigit03
+    100014: LArmDigit11
+    100016: LArmDigit12
+    100018: LArmDigit13
+    100020: LArmDigit21
+    100022: LArmDigit22
+    100024: LArmDigit23
+    100026: LArmPalm
+    100028: LLeg1
+    100030: LLeg2
+    100032: LLegDigit01
+    100034: LLegPalm
+    100036: LLegPlatform
+    100038: Pelvis
+    100040: RArm1
+    100042: RArm2
+    100044: RArmCollarbone
+    100046: RArmDigit01
+    100048: RArmDigit02
+    100050: RArmDigit03
+    100052: RArmDigit11
+    100054: RArmDigit12
+    100056: RArmDigit13
+    100058: RArmDigit21
+    100060: RArmDigit22
+    100062: RArmDigit23
+    100064: RArmPalm
+    100066: Ribcage
+    100068: RLeg1
+    100070: RLeg2
+    100072: RLegPalm
+    100074: RLegPlatform
+    100076: SheKRLegDigit01
+    100078: SphereMan
+    100080: //RootNode
+    100082: Spine
+    100084: SheKLArmDigit01
+    100086: SheKLArmDigit02
+    100088: SheKLArmDigit03
+    100090: SheKLArmDigit11
+    100092: SheKLArmDigit12
+    100094: SheKLArmDigit13
+    100096: SheKLArmDigit21
+    100098: SheKLArmDigit22
+    100100: SheKLArmDigit23
+    100102: SheKRArmDigit01
+    100104: SheKRArmDigit02
+    100106: SheKRArmDigit03
+    100108: SheKRArmDigit11
+    100110: SheKRArmDigit12
+    100112: SheKRArmDigit13
+    100114: SheKRArmDigit21
+    100116: SheKRArmDigit22
+    100118: SheKRArmDigit23
+    400000: base
+    400002: LArm1
+    400004: LArm2
+    400006: LArmCollarbone
+    400008: LArmDigit01
+    400010: LArmDigit02
+    400012: LArmDigit03
+    400014: LArmDigit11
+    400016: LArmDigit12
+    400018: LArmDigit13
+    400020: LArmDigit21
+    400022: LArmDigit22
+    400024: LArmDigit23
+    400026: LArmPalm
+    400028: LLeg1
+    400030: LLeg2
+    400032: LLegDigit01
+    400034: LLegPalm
+    400036: LLegPlatform
+    400038: Pelvis
+    400040: RArm1
+    400042: RArm2
+    400044: RArmCollarbone
+    400046: RArmDigit01
+    400048: RArmDigit02
+    400050: RArmDigit03
+    400052: RArmDigit11
+    400054: RArmDigit12
+    400056: RArmDigit13
+    400058: RArmDigit21
+    400060: RArmDigit22
+    400062: RArmDigit23
+    400064: RArmPalm
+    400066: Ribcage
+    400068: RLeg1
+    400070: RLeg2
+    400072: RLegPalm
+    400074: RLegPlatform
+    400076: SheKRLegDigit01
+    400078: SphereMan
+    400080: //RootNode
+    400082: Spine
+    400084: SheKLArmDigit01
+    400086: SheKLArmDigit02
+    400088: SheKLArmDigit03
+    400090: SheKLArmDigit11
+    400092: SheKLArmDigit12
+    400094: SheKLArmDigit13
+    400096: SheKLArmDigit21
+    400098: SheKLArmDigit22
+    400100: SheKLArmDigit23
+    400102: SheKRArmDigit01
+    400104: SheKRArmDigit02
+    400106: SheKRArmDigit03
+    400108: SheKRArmDigit11
+    400110: SheKRArmDigit12
+    400112: SheKRArmDigit13
+    400114: SheKRArmDigit21
+    400116: SheKRArmDigit22
+    400118: SheKRArmDigit23
+    4300000: SphereMan
+    7400000: Dangle
+    9500000: //RootNode
+    13700000: SphereMan
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Dangle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: base
+        weight: 1
+      - path: LLegPlatform
+        weight: 1
+      - path: Pelvis
+        weight: 1
+      - path: Pelvis/LLeg1
+        weight: 1
+      - path: Pelvis/LLeg1/LLeg2
+        weight: 1
+      - path: Pelvis/LLeg1/LLeg2/LLegPalm
+        weight: 1
+      - path: Pelvis/LLeg1/LLeg2/LLegPalm/LLegDigit01
+        weight: 1
+      - path: Pelvis/RLeg1
+        weight: 1
+      - path: Pelvis/RLeg1/RLeg2
+        weight: 1
+      - path: Pelvis/RLeg1/RLeg2/RLegPalm
+        weight: 1
+      - path: Pelvis/RLeg1/RLeg2/RLegPalm/SheKRLegDigit01
+        weight: 1
+      - path: Pelvis/Spine
+        weight: 1
+      - path: Pelvis/Spine/Ribcage
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/LArmCollarbone
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/LArmCollarbone/LArm1
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/LArmCollarbone/LArm1/LArm2
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/LArmCollarbone/LArm1/LArm2/LArmPalm
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/LArmCollarbone/LArm1/LArm2/LArmPalm/SheKLArmDigit01
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/LArmCollarbone/LArm1/LArm2/LArmPalm/SheKLArmDigit01/SheKLArmDigit02
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/LArmCollarbone/LArm1/LArm2/LArmPalm/SheKLArmDigit01/SheKLArmDigit02/SheKLArmDigit03
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/LArmCollarbone/LArm1/LArm2/LArmPalm/SheKLArmDigit11
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/LArmCollarbone/LArm1/LArm2/LArmPalm/SheKLArmDigit11/SheKLArmDigit12
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/LArmCollarbone/LArm1/LArm2/LArmPalm/SheKLArmDigit11/SheKLArmDigit12/SheKLArmDigit13
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/LArmCollarbone/LArm1/LArm2/LArmPalm/SheKLArmDigit21
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/LArmCollarbone/LArm1/LArm2/LArmPalm/SheKLArmDigit21/SheKLArmDigit22
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/LArmCollarbone/LArm1/LArm2/LArmPalm/SheKLArmDigit21/SheKLArmDigit22/SheKLArmDigit23
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/RArmCollarbone
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/RArmCollarbone/RArm1
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/RArmCollarbone/RArm1/RArm2
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/RArmCollarbone/RArm1/RArm2/RArmPalm
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/RArmCollarbone/RArm1/RArm2/RArmPalm/SheKRArmDigit01
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/RArmCollarbone/RArm1/RArm2/RArmPalm/SheKRArmDigit01/SheKRArmDigit02
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/RArmCollarbone/RArm1/RArm2/RArmPalm/SheKRArmDigit01/SheKRArmDigit02/SheKRArmDigit03
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/RArmCollarbone/RArm1/RArm2/RArmPalm/SheKRArmDigit11
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/RArmCollarbone/RArm1/RArm2/RArmPalm/SheKRArmDigit11/SheKRArmDigit12
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/RArmCollarbone/RArm1/RArm2/RArmPalm/SheKRArmDigit11/SheKRArmDigit12/SheKRArmDigit13
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/RArmCollarbone/RArm1/RArm2/RArmPalm/SheKRArmDigit21
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/RArmCollarbone/RArm1/RArm2/RArmPalm/SheKRArmDigit21/SheKRArmDigit22
+        weight: 1
+      - path: Pelvis/Spine/Ribcage/RArmCollarbone/RArm1/RArm2/RArmPalm/SheKRArmDigit21/SheKRArmDigit22/SheKRArmDigit23
+        weight: 1
+      - path: RLegPlatform
+        weight: 1
+      - path: SphereMan
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 27426e3edbb76d04495a6041be9e54e9,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

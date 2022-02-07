@@ -1,0 +1,1129 @@
+fileFormatVersion: 2
+guid: 2aa49f5484494544aab36119827b19bc
+ModelImporter:
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: ball_l
+  - first:
+      1: 100002
+    second: ball_l_end
+  - first:
+      1: 100004
+    second: ball_r
+  - first:
+      1: 100006
+    second: ball_r_end
+  - first:
+      1: 100008
+    second: calf_l
+  - first:
+      1: 100010
+    second: calf_r
+  - first:
+      1: 100012
+    second: Clavicle_l
+  - first:
+      1: 100014
+    second: Clavicle_r
+  - first:
+      1: 100016
+    second: foot_l
+  - first:
+      1: 100018
+    second: foot_r
+  - first:
+      1: 100020
+    second: hand_l
+  - first:
+      1: 100022
+    second: hand_r
+  - first:
+      1: 100024
+    second: head
+  - first:
+      1: 100026
+    second: head_end
+  - first:
+      1: 100028
+    second: index_01_l
+  - first:
+      1: 100030
+    second: index_01_r
+  - first:
+      1: 100032
+    second: index_02_l
+  - first:
+      1: 100034
+    second: index_02_r
+  - first:
+      1: 100036
+    second: index_03_l
+  - first:
+      1: 100038
+    second: index_03_l_end
+  - first:
+      1: 100040
+    second: index_03_r
+  - first:
+      1: 100042
+    second: index_03_r_end
+  - first:
+      1: 100044
+    second: Liam
+  - first:
+      1: 100046
+    second: //RootNode
+  - first:
+      1: 100048
+    second: Liam_Hair
+  - first:
+      1: 100050
+    second: Liam_Hair_A
+  - first:
+      1: 100052
+    second: Liam_Hair_B
+  - first:
+      1: 100054
+    second: Liam_Hair_C
+  - first:
+      1: 100056
+    second: Liam_Hair_D
+  - first:
+      1: 100058
+    second: Liam_Hair_E
+  - first:
+      1: 100060
+    second: Liam_Hair_F
+  - first:
+      1: 100062
+    second: Liam_Head_A
+  - first:
+      1: 100064
+    second: Liam_Head_B
+  - first:
+      1: 100066
+    second: Liam_Naked
+  - first:
+      1: 100068
+    second: Liam_NoPants
+  - first:
+      1: 100070
+    second: Liam_NoShirt
+  - first:
+      1: 100072
+    second: Liam_NoShoes
+  - first:
+      1: 100074
+    second: Liam_Pants
+  - first:
+      1: 100076
+    second: Liam_Shoes
+  - first:
+      1: 100078
+    second: Liam_T_Shirt
+  - first:
+      1: 100080
+    second: Liam_Tank
+  - first:
+      1: 100082
+    second: lowerarm_l
+  - first:
+      1: 100084
+    second: lowerarm_r
+  - first:
+      1: 100086
+    second: middle_01_l
+  - first:
+      1: 100088
+    second: middle_01_r
+  - first:
+      1: 100090
+    second: middle_02_l
+  - first:
+      1: 100092
+    second: middle_02_r
+  - first:
+      1: 100094
+    second: middle_03_l
+  - first:
+      1: 100096
+    second: middle_03_l_end
+  - first:
+      1: 100098
+    second: middle_03_r
+  - first:
+      1: 100100
+    second: middle_03_r_end
+  - first:
+      1: 100102
+    second: neck_01
+  - first:
+      1: 100104
+    second: Pelvis
+  - first:
+      1: 100106
+    second: pinky_01_l
+  - first:
+      1: 100108
+    second: pinky_01_r
+  - first:
+      1: 100110
+    second: pinky_02_l
+  - first:
+      1: 100112
+    second: pinky_02_r
+  - first:
+      1: 100114
+    second: pinky_03_l
+  - first:
+      1: 100116
+    second: pinky_03_l_end
+  - first:
+      1: 100118
+    second: pinky_03_r
+  - first:
+      1: 100120
+    second: pinky_03_r_end
+  - first:
+      1: 100122
+    second: ring_01_l
+  - first:
+      1: 100124
+    second: ring_01_r
+  - first:
+      1: 100126
+    second: ring_02_l
+  - first:
+      1: 100128
+    second: ring_02_r
+  - first:
+      1: 100130
+    second: ring_03_l
+  - first:
+      1: 100132
+    second: ring_03_l_end
+  - first:
+      1: 100134
+    second: ring_03_r
+  - first:
+      1: 100136
+    second: ring_03_r_end
+  - first:
+      1: 100138
+    second: spine_01
+  - first:
+      1: 100140
+    second: Spine_02
+  - first:
+      1: 100142
+    second: Spine_03
+  - first:
+      1: 100144
+    second: thigh_l
+  - first:
+      1: 100146
+    second: thigh_r
+  - first:
+      1: 100148
+    second: thumb_01_l
+  - first:
+      1: 100150
+    second: thumb_01_r
+  - first:
+      1: 100152
+    second: thumb_02_l
+  - first:
+      1: 100154
+    second: thumb_02_r
+  - first:
+      1: 100156
+    second: thumb_03_l
+  - first:
+      1: 100158
+    second: thumb_03_l_end
+  - first:
+      1: 100160
+    second: thumb_03_r
+  - first:
+      1: 100162
+    second: thumb_03_r_end
+  - first:
+      1: 100164
+    second: Upperarm_l
+  - first:
+      1: 100166
+    second: Upperarm_r
+  - first:
+      4: 400000
+    second: ball_l
+  - first:
+      4: 400002
+    second: ball_l_end
+  - first:
+      4: 400004
+    second: ball_r
+  - first:
+      4: 400006
+    second: ball_r_end
+  - first:
+      4: 400008
+    second: calf_l
+  - first:
+      4: 400010
+    second: calf_r
+  - first:
+      4: 400012
+    second: Clavicle_l
+  - first:
+      4: 400014
+    second: Clavicle_r
+  - first:
+      4: 400016
+    second: foot_l
+  - first:
+      4: 400018
+    second: foot_r
+  - first:
+      4: 400020
+    second: hand_l
+  - first:
+      4: 400022
+    second: hand_r
+  - first:
+      4: 400024
+    second: head
+  - first:
+      4: 400026
+    second: head_end
+  - first:
+      4: 400028
+    second: index_01_l
+  - first:
+      4: 400030
+    second: index_01_r
+  - first:
+      4: 400032
+    second: index_02_l
+  - first:
+      4: 400034
+    second: index_02_r
+  - first:
+      4: 400036
+    second: index_03_l
+  - first:
+      4: 400038
+    second: index_03_l_end
+  - first:
+      4: 400040
+    second: index_03_r
+  - first:
+      4: 400042
+    second: index_03_r_end
+  - first:
+      4: 400044
+    second: Liam
+  - first:
+      4: 400046
+    second: //RootNode
+  - first:
+      4: 400048
+    second: Liam_Hair
+  - first:
+      4: 400050
+    second: Liam_Hair_A
+  - first:
+      4: 400052
+    second: Liam_Hair_B
+  - first:
+      4: 400054
+    second: Liam_Hair_C
+  - first:
+      4: 400056
+    second: Liam_Hair_D
+  - first:
+      4: 400058
+    second: Liam_Hair_E
+  - first:
+      4: 400060
+    second: Liam_Hair_F
+  - first:
+      4: 400062
+    second: Liam_Head_A
+  - first:
+      4: 400064
+    second: Liam_Head_B
+  - first:
+      4: 400066
+    second: Liam_Naked
+  - first:
+      4: 400068
+    second: Liam_NoPants
+  - first:
+      4: 400070
+    second: Liam_NoShirt
+  - first:
+      4: 400072
+    second: Liam_NoShoes
+  - first:
+      4: 400074
+    second: Liam_Pants
+  - first:
+      4: 400076
+    second: Liam_Shoes
+  - first:
+      4: 400078
+    second: Liam_T_Shirt
+  - first:
+      4: 400080
+    second: Liam_Tank
+  - first:
+      4: 400082
+    second: lowerarm_l
+  - first:
+      4: 400084
+    second: lowerarm_r
+  - first:
+      4: 400086
+    second: middle_01_l
+  - first:
+      4: 400088
+    second: middle_01_r
+  - first:
+      4: 400090
+    second: middle_02_l
+  - first:
+      4: 400092
+    second: middle_02_r
+  - first:
+      4: 400094
+    second: middle_03_l
+  - first:
+      4: 400096
+    second: middle_03_l_end
+  - first:
+      4: 400098
+    second: middle_03_r
+  - first:
+      4: 400100
+    second: middle_03_r_end
+  - first:
+      4: 400102
+    second: neck_01
+  - first:
+      4: 400104
+    second: Pelvis
+  - first:
+      4: 400106
+    second: pinky_01_l
+  - first:
+      4: 400108
+    second: pinky_01_r
+  - first:
+      4: 400110
+    second: pinky_02_l
+  - first:
+      4: 400112
+    second: pinky_02_r
+  - first:
+      4: 400114
+    second: pinky_03_l
+  - first:
+      4: 400116
+    second: pinky_03_l_end
+  - first:
+      4: 400118
+    second: pinky_03_r
+  - first:
+      4: 400120
+    second: pinky_03_r_end
+  - first:
+      4: 400122
+    second: ring_01_l
+  - first:
+      4: 400124
+    second: ring_01_r
+  - first:
+      4: 400126
+    second: ring_02_l
+  - first:
+      4: 400128
+    second: ring_02_r
+  - first:
+      4: 400130
+    second: ring_03_l
+  - first:
+      4: 400132
+    second: ring_03_l_end
+  - first:
+      4: 400134
+    second: ring_03_r
+  - first:
+      4: 400136
+    second: ring_03_r_end
+  - first:
+      4: 400138
+    second: spine_01
+  - first:
+      4: 400140
+    second: Spine_02
+  - first:
+      4: 400142
+    second: Spine_03
+  - first:
+      4: 400144
+    second: thigh_l
+  - first:
+      4: 400146
+    second: thigh_r
+  - first:
+      4: 400148
+    second: thumb_01_l
+  - first:
+      4: 400150
+    second: thumb_01_r
+  - first:
+      4: 400152
+    second: thumb_02_l
+  - first:
+      4: 400154
+    second: thumb_02_r
+  - first:
+      4: 400156
+    second: thumb_03_l
+  - first:
+      4: 400158
+    second: thumb_03_l_end
+  - first:
+      4: 400160
+    second: thumb_03_r
+  - first:
+      4: 400162
+    second: thumb_03_r_end
+  - first:
+      4: 400164
+    second: Upperarm_l
+  - first:
+      4: 400166
+    second: Upperarm_r
+  - first:
+      43: 4300000
+    second: Liam_Head_B
+  - first:
+      43: 4300002
+    second: Liam_Head_A
+  - first:
+      43: 4300004
+    second: Liam_Pants
+  - first:
+      43: 4300006
+    second: Liam_Hair_E
+  - first:
+      43: 4300008
+    second: Liam_Hair_B
+  - first:
+      43: 4300010
+    second: Liam_Hair_A
+  - first:
+      43: 4300012
+    second: Liam_Shoes
+  - first:
+      43: 4300014
+    second: Liam_NoShoes
+  - first:
+      43: 4300016
+    second: Liam_NoPants
+  - first:
+      43: 4300018
+    second: Liam_T_Shirt
+  - first:
+      43: 4300020
+    second: Liam_Tank
+  - first:
+      43: 4300022
+    second: Liam_NoShirt
+  - first:
+      43: 4300024
+    second: Liam_Hair_F
+  - first:
+      43: 4300026
+    second: Liam_Hair_D
+  - first:
+      43: 4300028
+    second: Liam_Hair_C
+  - first:
+      43: 4300030
+    second: Liam_Hair
+  - first:
+      43: 4300032
+    second: Liam_Naked
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Liam_Hair
+  - first:
+      137: 13700002
+    second: Liam_Hair_A
+  - first:
+      137: 13700004
+    second: Liam_Hair_B
+  - first:
+      137: 13700006
+    second: Liam_Hair_C
+  - first:
+      137: 13700008
+    second: Liam_Hair_D
+  - first:
+      137: 13700010
+    second: Liam_Hair_E
+  - first:
+      137: 13700012
+    second: Liam_Hair_F
+  - first:
+      137: 13700014
+    second: Liam_Head_A
+  - first:
+      137: 13700016
+    second: Liam_Head_B
+  - first:
+      137: 13700018
+    second: Liam_Naked
+  - first:
+      137: 13700020
+    second: Liam_NoPants
+  - first:
+      137: 13700022
+    second: Liam_NoShirt
+  - first:
+      137: 13700024
+    second: Liam_NoShoes
+  - first:
+      137: 13700026
+    second: Liam_Pants
+  - first:
+      137: 13700028
+    second: Liam_Shoes
+  - first:
+      137: 13700030
+    second: Liam_T_Shirt
+  - first:
+      137: 13700032
+    second: Liam_Tank
+  - first:
+      74: 1827226128182048838
+    second: Take 001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liam_Body
+    second: {fileID: 2100000, guid: 65e45cae122f7ec489e7097245376b49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liam_Feet
+    second: {fileID: 2100000, guid: 83f3e5560e8c12445b3307cfedfbe308, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liam_Hair
+    second: {fileID: 2100000, guid: e0666f0c9d7efa34190b94445565d117, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liam_Head
+    second: {fileID: 2100000, guid: ff31682968096e043a77279232970fcd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liam_Legs
+    second: {fileID: 2100000, guid: fbf12a50c70d4f7418bbb05bdb9e1ab8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liam_Mat
+    second: {fileID: 2100000, guid: 3f0f942e223694c4db6036ffc3ea18eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liam_Pants
+    second: {fileID: 2100000, guid: b9cfbf598188f0e43b7749d4999c820d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liam_TShirt
+    second: {fileID: 2100000, guid: 596cf1837f423674796d57e7869782eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liam_Tank
+    second: {fileID: 2100000, guid: fa521b059a860e94e97b14be5d5dc00b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Base HumanSpine4' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Base HumanRibcage' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 76
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Base HumanPelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanRThigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanRCalf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanRFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanSpine1
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanSpine2
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanSpine3
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanRCollarbone
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanRUpperarm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanRForearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanRPalm
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanNeck1
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanNeck2
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanHead
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanLCollarbone
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanLUpperarm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanLForearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanLPalm
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanLThigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanLCalf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanLFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Liam(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Base Human
+      parentName: Liam(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.50000006, y: -0.5, z: -0.4999999, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Base HumanLPlatform
+      parentName: Liam(Clone)
+      position: {x: -0.095356986, y: -0.000000002066512, z: 0.021471826}
+      rotation: {x: 0.50000006, y: -0.49999994, z: -0.49999994, w: 0.50000006}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Base HumanPelvis
+      parentName: Liam(Clone)
+      position: {x: 0.000000047177505, y: 0.9033449, z: -0.035433996}
+      rotation: {x: 0.49912265, y: -0.50086725, z: -0.4991312, w: 0.5008759}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Base HumanLThigh
+      parentName: Base HumanPelvis
+      position: {x: -0.016967315, y: 0.046261925, z: 0.054000415}
+      rotation: {x: 0.011188947, y: 0.99909973, z: -0.00026287982, w: 0.040920984}
+      scale: {x: 1, y: 1.0000008, z: 0.9999997}
+    - name: Base HumanLCalf
+      parentName: Base HumanLThigh
+      position: {x: -0.46400017, y: 0.00000005483627, z: 0.00000061035155}
+      rotation: {x: 0.0071705747, y: 0.037082184, z: 0.066767715, w: 0.99705344}
+      scale: {x: 1.0000001, y: 0.9999993, z: 1.0000005}
+    - name: Base HumanLFoot
+      parentName: Base HumanLCalf
+      position: {x: -0.4198045, y: -0.0000000047683715, z: -0.000000009536743}
+      rotation: {x: -0.0057031424, y: 0.00016587338, z: -0.68145376, w: 0.73183894}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+    - name: Base HumanRThigh
+      parentName: Base HumanPelvis
+      position: {x: -0.016967239, y: 0.046261933, z: -0.054000404}
+      rotation: {x: 0.011187886, y: 0.9990997, z: 0.0002629752, w: -0.04092151}
+      scale: {x: 0.99999994, y: 1.0000007, z: 0.9999997}
+    - name: Base HumanRCalf
+      parentName: Base HumanRThigh
+      position: {x: -0.4640001, y: 0.000000056028366, z: -0.00000064849854}
+      rotation: {x: -0.0071745575, y: -0.037067533, z: 0.066838264, w: 0.9970493}
+      scale: {x: 0.99999964, y: 1.0000018, z: 0.99999815}
+    - name: Base HumanRFoot
+      parentName: Base HumanRCalf
+      position: {x: -0.4198046, y: 0.0000000047683715, z: 0.000000009536743}
+      rotation: {x: 0.0058150487, y: -0.000062645806, z: -0.68152916, w: 0.7317679}
+      scale: {x: 0.9999972, y: 1.000003, z: 1.0000001}
+    - name: Base HumanSpine1
+      parentName: Base HumanPelvis
+      position: {x: -0.0450399, y: -0.0034460258, z: -0.000000008552451}
+      rotation: {x: -0.00016740618, y: 0.0010770282, z: -0.14497814, w: 0.9894343}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: Base HumanSpine2
+      parentName: Base HumanSpine1
+      position: {x: -0.1265985, y: -0.000000019073486, z: 0}
+      rotation: {x: -0.00013946863, y: 0.0009093177, z: 0.17320748, w: 0.984885}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000001}
+    - name: Base HumanSpine3
+      parentName: Base HumanSpine2
+      position: {x: -0.107845, y: -0.0000000047683715, z: 0}
+      rotation: {x: 0.000026099015, y: 0.00028375158, z: 0.085658096, w: 0.99632454}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1}
+    - name: Base HumanSpine4
+      parentName: Base HumanSpine3
+      position: {x: -0.115893096, y: 0.000000019073486, z: 0}
+      rotation: {x: -0.00006675736, y: -0.00071025564, z: -0.08931789, w: 0.9960029}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
+    - name: Base HumanRibcage
+      parentName: Base HumanSpine4
+      position: {x: -0.15616958, y: 0, z: 2.9802322e-10}
+      rotation: {x: -0.000012595558, y: -0.0015813429, z: -0.026661813, w: 0.99964327}
+      scale: {x: 0.99999905, y: 0.9999988, z: 0.99999994}
+    - name: Base HumanLCollarbone
+      parentName: Base HumanRibcage
+      position: {x: 0.034629975, y: 0.10002644, z: 0.04331844}
+      rotation: {x: 0.023624988, y: 0.76923245, z: 0.13204405, w: 0.62473017}
+      scale: {x: 1, y: 0.9999999, z: 1.0000002}
+    - name: Base HumanLUpperarm
+      parentName: Base HumanLCollarbone
+      position: {x: -0.14890106, y: 0, z: -0.000000076293944}
+      rotation: {x: 0.13208099, y: -0.08653105, z: -0.12509722, w: 0.97949874}
+      scale: {x: 0.99999976, y: 1, z: 1.0000001}
+    - name: Base HumanLForearm
+      parentName: Base HumanLUpperarm
+      position: {x: -0.28148863, y: -0.0000000047683715, z: 0.000000076293944}
+      rotation: {x: 0.07543481, y: -0.012618603, z: -0.009370514, w: 0.99702686}
+      scale: {x: 0.99999976, y: 1, z: 1.0000005}
+    - name: Base HumanLPalm
+      parentName: Base HumanLForearm
+      position: {x: -0.24226277, y: 0, z: -0.000000076293944}
+      rotation: {x: -0.7248637, y: 0.06293785, z: -0.013800714, w: 0.68587244}
+      scale: {x: 1.0000008, y: 0.9999984, z: 1.0000002}
+    - name: Base HumanNeck1
+      parentName: Base HumanRibcage
+      position: {x: -0.00078262325, y: 0.01328737, z: -0.0000000090897085}
+      rotation: {x: 0.0000000020035895, y: 0.0000000048624953, z: -0.06562832, w: 0.99784416}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Base HumanNeck2
+      parentName: Base HumanNeck1
+      position: {x: -0.08752701, y: 0, z: -1.4901161e-10}
+      rotation: {x: 0.000000014516549, y: -0.000000011840503, z: -0.09296885, w: 0.995669}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: Base HumanHead
+      parentName: Base HumanNeck2
+      position: {x: -0.09244903, y: 0, z: 1.4901161e-10}
+      rotation: {x: -0.000000020361734, y: 0.0000000146236205, z: -0.047517966, w: 0.99887043}
+      scale: {x: 0.9999998, y: 0.9999999, z: 1}
+    - name: Base HumanRCollarbone
+      parentName: Base HumanRibcage
+      position: {x: 0.034629975, y: 0.100026436, z: -0.04331843}
+      rotation: {x: 0.02362495, y: 0.76923245, z: -0.13204423, w: -0.62473017}
+      scale: {x: 0.99999964, y: 1.0000005, z: 1}
+    - name: Base HumanRUpperarm
+      parentName: Base HumanRCollarbone
+      position: {x: -0.14890106, y: 0.0000000047683715, z: 0}
+      rotation: {x: -0.13208102, y: 0.086530626, z: -0.12509729, w: 0.97949874}
+      scale: {x: 1.0000002, y: 0.9999998, z: 0.99999976}
+    - name: Base HumanRForearm
+      parentName: Base HumanRUpperarm
+      position: {x: -0.28148863, y: 0, z: -0.000000076293944}
+      rotation: {x: -0.07543486, y: 0.012618761, z: -0.009370395, w: 0.9970269}
+      scale: {x: 0.9999997, y: 1, z: 1.0000002}
+    - name: Base HumanRPalm
+      parentName: Base HumanRForearm
+      position: {x: -0.24226268, y: -0.000000009536743, z: 0.000000076293944}
+      rotation: {x: 0.72486365, y: -0.062937915, z: -0.0138006825, w: 0.6858725}
+      scale: {x: 0.99999917, y: 1.0000007, z: 0.9999996}
+    - name: Base HumanRPlatform
+      parentName: Liam(Clone)
+      position: {x: 0.095356986, y: -0.0000000020665172, z: 0.021471854}
+      rotation: {x: 0.50000006, y: -0.49999994, z: -0.49999994, w: 0.50000006}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Liam_Hair
+      parentName: Liam(Clone)
+      position: {x: 0.00008228391, y: -0.00000013289723, z: -0.011197156}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Liam_Hair_A
+      parentName: Liam(Clone)
+      position: {x: 0.00008228391, y: -0.00000013289723, z: -0.011197156}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Liam_Hair_B
+      parentName: Liam(Clone)
+      position: {x: 0.00008228391, y: -0.00000013289723, z: -0.011197156}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Liam_Hair_C
+      parentName: Liam(Clone)
+      position: {x: 0.00008228391, y: -0.00000013289723, z: -0.011197156}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Liam_Hair_D
+      parentName: Liam(Clone)
+      position: {x: 0.00008228391, y: -0.00000013289723, z: -0.011197156}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Liam_Hair_E
+      parentName: Liam(Clone)
+      position: {x: 0.00008228391, y: -0.00000013289723, z: -0.011197156}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Liam_Hair_F
+      parentName: Liam(Clone)
+      position: {x: 0.00008228391, y: -0.00000013289723, z: -0.011197156}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Liam_Head_A
+      parentName: Liam(Clone)
+      position: {x: 0.000082360195, y: 0.0000002485725, z: -0.011197156}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Liam_NoPants
+      parentName: Liam(Clone)
+      position: {x: 0.00008232205, y: 0.0000004774543, z: -0.011196546}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Liam_NoShoes
+      parentName: Liam(Clone)
+      position: {x: 0.000082512786, y: 0.00000040116038, z: -0.011197156}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Liam_Pants
+      parentName: Liam(Clone)
+      position: {x: 0.00008232205, y: 0.0000004774543, z: -0.011196546}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Liam_Shoes
+      parentName: Liam(Clone)
+      position: {x: 0.00008232205, y: 0.0000004774543, z: -0.011196546}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Liam_T_Shirt
+      parentName: Liam(Clone)
+      position: {x: 0.00008232205, y: 0.0000004774543, z: -0.011196546}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Liam_Tank
+      parentName: Liam(Clone)
+      position: {x: 0.00008232205, y: 0.0000004774543, z: -0.011196546}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

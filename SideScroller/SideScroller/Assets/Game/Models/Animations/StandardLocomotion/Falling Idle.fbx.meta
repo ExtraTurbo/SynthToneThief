@@ -1,0 +1,516 @@
+fileFormatVersion: 2
+guid: cf65e975f6bc08b40923c7c2d239b7f8
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Take 001
+  - first:
+      74: -203655887218126122
+    second: Falling
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
+      in configuration does not match rotation in animation file:\n\t'Base HumanSpine4'
+      : rotation error = 16.886658 deg\n\t'Base HumanRibcage' : rotation error =
+      16.886738 deg\n"
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Base HumanSpine4' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'Base HumanRibcage'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Falling
+      takeName: mixamo.com
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Base HumanPelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanLThigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanRThigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanLCalf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanRCalf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanLFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanRFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanSpine1
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanSpine2
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanNeck1
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanNeck2
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanLCollarbone
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanRCollarbone
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanLUpperarm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanRUpperarm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanLForearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanRForearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanLPalm
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanRPalm
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanHead
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Base HumanSpine3
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Falling Idle(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Base Human
+      parentName: Falling Idle(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.50000006, y: -0.5, z: -0.4999999, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Base HumanPelvis
+      parentName: Falling Idle(Clone)
+      position: {x: -0.017165294, y: 0.96850413, z: -0.034045413}
+      rotation: {x: 0.3939707, y: -0.39931005, z: -0.5839742, w: 0.5867817}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Base HumanLThigh
+      parentName: Base HumanPelvis
+      position: {x: -0.016967315, y: 0.046261925, z: 0.05400041}
+      rotation: {x: 0.051278323, y: 0.9245533, z: 0.36990595, w: 0.07577288}
+      scale: {x: 1.0000006, y: 1.0000015, z: 1.0000008}
+    - name: Base HumanLCalf
+      parentName: Base HumanLThigh
+      position: {x: -0.46400034, y: 0.000000056028366, z: 0.000000629425}
+      rotation: {x: 0.0071650166, y: 0.037108112, z: 0.066792555, w: 0.9970509}
+      scale: {x: 1.0000017, y: 1.0000005, z: 1.0000019}
+    - name: Base HumanLFoot
+      parentName: Base HumanLCalf
+      position: {x: -0.41980457, y: 0, z: -0.000000009536743}
+      rotation: {x: -0.0053076157, y: 0.00074496295, z: -0.6815425, w: 0.73175895}
+      scale: {x: 1.0000004, y: 0.99999994, z: 1.0000001}
+    - name: Base HumanRThigh
+      parentName: Base HumanPelvis
+      position: {x: -0.016967315, y: 0.04626193, z: -0.05400041}
+      rotation: {x: 0.02076714, y: 0.9277993, z: 0.37250128, w: -0.00020243229}
+      scale: {x: 1, y: 1.0000012, z: 0.9999999}
+    - name: Base HumanRCalf
+      parentName: Base HumanRThigh
+      position: {x: -0.4640002, y: 0.000000056028366, z: -0.000000629425}
+      rotation: {x: -0.007169559, y: -0.037045904, z: 0.066667914, w: 0.9970615}
+      scale: {x: 1.0000001, y: 1.0000013, z: 0.99999934}
+    - name: Base HumanRFoot
+      parentName: Base HumanRCalf
+      position: {x: -0.4198046, y: 0, z: 0}
+      rotation: {x: 0.005830803, y: -0.000078573816, z: -0.68140393, w: 0.7318845}
+      scale: {x: 1.0000001, y: 1.0000026, z: 1.0000015}
+    - name: Base HumanSpine1
+      parentName: Base HumanPelvis
+      position: {x: -0.0450399, y: -0.0034460258, z: -0.000000008552451}
+      rotation: {x: 0.37309366, y: 0.013312072, z: -0.15905148, w: 0.91396207}
+      scale: {x: 1.0000008, y: 1.0000012, z: 1.0000008}
+    - name: Base HumanSpine2
+      parentName: Base HumanSpine1
+      position: {x: -0.112704694, y: 0, z: 0}
+      rotation: {x: -0.00015357135, y: 0.0010131355, z: 0.17347229, w: 0.9848383}
+      scale: {x: 1.0000014, y: 1.0000001, z: 1.0000002}
+    - name: Base HumanSpine3
+      parentName: Base HumanSpine2
+      position: {x: -0.09600944, y: 0, z: 0}
+      rotation: {x: 0.0000275251, y: 0.00031634097, z: 0.08574111, w: 0.9963174}
+      scale: {x: 1.0000004, y: 1.0000017, z: 1.0000005}
+    - name: Base HumanSpine4
+      parentName: Base HumanSpine3
+      position: {x: -0.10317421, y: 0, z: 0}
+      rotation: {x: -0.00007514175, y: -0.0007911568, z: -0.08952576, w: 0.9959842}
+      scale: {x: 1, y: 0.9999998, z: 1.0000002}
+    - name: Base HumanRibcage
+      parentName: Base HumanSpine4
+      position: {x: -0.13903053, y: 0, z: 2.9802322e-10}
+      rotation: {x: -0.000013455749, y: -0.0017613173, z: -0.027123958, w: 0.9996306}
+      scale: {x: 0.999999, y: 0.9999991, z: 0.9999998}
+    - name: Base HumanLCollarbone
+      parentName: Base HumanRibcage
+      position: {x: 0.02729782, y: 0.09697791, z: 0.047974642}
+      rotation: {x: -0.07401992, y: 0.7644275, z: 0.016599385, w: 0.6402313}
+      scale: {x: 1.0000001, y: 1.0000005, z: 0.9999996}
+    - name: Base HumanLUpperarm
+      parentName: Base HumanLCollarbone
+      position: {x: -0.11498102, y: -0.0000000047683715, z: 0}
+      rotation: {x: 0.059972662, y: -0.0018820753, z: -0.15462829, w: 0.98614895}
+      scale: {x: 1.0000001, y: 0.9999997, z: 0.99999934}
+    - name: Base HumanLForearm
+      parentName: Base HumanLUpperarm
+      position: {x: -0.27460423, y: 0, z: 0}
+      rotation: {x: 0.08820755, y: -0.01945532, z: -0.021297703, w: 0.9956844}
+      scale: {x: 0.9999979, y: 0.9999997, z: 0.9999988}
+    - name: Base HumanLPalm
+      parentName: Base HumanLForearm
+      position: {x: -0.24306427, y: -0.000000019073486, z: 0}
+      rotation: {x: -0.7269611, y: 0.049280517, z: -0.008706443, w: 0.68485266}
+      scale: {x: 1.0000024, y: 1.0000033, z: 0.9999954}
+    - name: Base HumanNeck1
+      parentName: Base HumanRibcage
+      position: {x: -0.00078262325, y: 0.013287372, z: -0.000000008940696}
+      rotation: {x: 0.0000003426803, y: 0.0000001072185, z: 0.06562805, w: -0.99784416}
+      scale: {x: 1.0000006, y: 1.000001, z: 1.0000004}
+    - name: Base HumanNeck2
+      parentName: Base HumanNeck1
+      position: {x: -0.08752685, y: 0.000000019073486, z: -1.4901161e-10}
+      rotation: {x: 0.00000036283822, y: -0.0000000014908534, z: -0.09296895, w: 0.995669}
+      scale: {x: 1.0000001, y: 1, z: 1.0000005}
+    - name: Base HumanHead
+      parentName: Base HumanNeck2
+      position: {x: -0.09244919, y: 0, z: 0}
+      rotation: {x: -0.000008073282, y: -0.00000304694, z: 0.04751807, w: -0.9988704}
+      scale: {x: 1.0000037, y: 1.0000051, z: 1.0000027}
+    - name: Base HumanRCollarbone
+      parentName: Base HumanRibcage
+      position: {x: 0.02729782, y: 0.09697791, z: -0.047974657}
+      rotation: {x: 0.16829309, y: 0.7520392, z: -0.19822712, w: -0.60565704}
+      scale: {x: 1.000001, y: 1.0000004, z: 1.0000018}
+    - name: Base HumanRUpperarm
+      parentName: Base HumanRCollarbone
+      position: {x: -0.11498104, y: -0.000000007152557, z: 0}
+      rotation: {x: -0.052663278, y: 0.13118906, z: -0.071322575, w: 0.987385}
+      scale: {x: 0.9999997, y: 1.0000001, z: 0.99999994}
+    - name: Base HumanRForearm
+      parentName: Base HumanRUpperarm
+      position: {x: -0.27460426, y: -0.0000000047683715, z: -0.000000076293944}
+      rotation: {x: -0.08939183, y: 0.013259078, z: -0.022220828, w: 0.9956604}
+      scale: {x: 1.0000013, y: 0.99999934, z: 1}
+    - name: Base HumanRPalm
+      parentName: Base HumanRForearm
+      position: {x: -0.24306427, y: 0.000000009536743, z: -0.000000076293944}
+      rotation: {x: 0.7269611, y: -0.049280412, z: -0.008706533, w: 0.6848528}
+      scale: {x: 1.0000037, y: 0.99999815, z: 0.9999998}
+    - name: Base HumanLPlatform
+      parentName: Falling Idle(Clone)
+      position: {x: -0.095356986, y: -0.000000002066512, z: 0.021471826}
+      rotation: {x: 0.50000006, y: -0.4999999, z: -0.49999994, w: 0.5000001}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Base HumanRPlatform
+      parentName: Falling Idle(Clone)
+      position: {x: 0.095356986, y: -0.0000000020665172, z: 0.021471854}
+      rotation: {x: 0.50000006, y: -0.4999999, z: -0.49999994, w: 0.5000001}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kira_Head_A
+      parentName: Falling Idle(Clone)
+      position: {x: -0.000000003725292, y: -0.0000000010263748, z: -0.00000006416823}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kira_Pants_B
+      parentName: Falling Idle(Clone)
+      position: {x: -9.637455e-17, y: -0.0000000010263776, z: 9.30277e-11}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kira_Hair_A
+      parentName: Falling Idle(Clone)
+      position: {x: -9.637455e-17, y: -0.0000000010263776, z: 9.30277e-11}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kira_Hair_B
+      parentName: Falling Idle(Clone)
+      position: {x: -9.637455e-17, y: -0.0000000010263776, z: 9.30277e-11}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kira_Hair_C
+      parentName: Falling Idle(Clone)
+      position: {x: -9.637455e-17, y: -0.0000000010263776, z: 9.30277e-11}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kira_Hair_E
+      parentName: Falling Idle(Clone)
+      position: {x: -9.637455e-17, y: -0.0000000010263776, z: 9.30277e-11}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kira_Hair_F
+      parentName: Falling Idle(Clone)
+      position: {x: -9.637455e-17, y: -0.0000000010263776, z: 9.30277e-11}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kira_Hair_Default
+      parentName: Falling Idle(Clone)
+      position: {x: -9.637455e-17, y: -0.0000000010263776, z: 9.30277e-11}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kira_Pants_A
+      parentName: Falling Idle(Clone)
+      position: {x: -9.637455e-17, y: -0.0000000010263776, z: 9.30277e-11}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kira_Shorts
+      parentName: Falling Idle(Clone)
+      position: {x: -9.637455e-17, y: -0.0000000010263776, z: 9.30277e-11}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kira_Tank
+      parentName: Falling Idle(Clone)
+      position: {x: -9.637455e-17, y: -0.0000000010263776, z: 9.30277e-11}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kira_Shirt
+      parentName: Falling Idle(Clone)
+      position: {x: -9.637455e-17, y: -0.0000000010263776, z: 9.30277e-11}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kira_Feet
+      parentName: Falling Idle(Clone)
+      position: {x: -9.637455e-17, y: -0.0000000010263776, z: 9.30277e-11}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kira_Shoes
+      parentName: Falling Idle(Clone)
+      position: {x: -9.637455e-17, y: -0.0000000010263776, z: 9.30277e-11}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Kira_Hair_D
+      parentName: Falling Idle(Clone)
+      position: {x: -9.637455e-17, y: -0.0000000010263776, z: 9.30277e-11}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
