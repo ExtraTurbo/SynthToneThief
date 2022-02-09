@@ -12,6 +12,14 @@ TagManager:
   - MovingPlatform
   - Checkpoint
   - Waypoint
+  - Growable
+  - Scripts
+  - Wall
+  - Breakable
+  - Shieldable
+  - GuitarPickup
+  - DrumPickup
+  - FlutePickup
   layers:
   - Default
   - TransparentFX

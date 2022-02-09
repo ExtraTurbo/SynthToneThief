@@ -1,0 +1,43 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GuitarProjectile : MonoBehaviour
+{
+    [SerializeField]
+    protected float speed = 5.0f;
+    [SerializeField]
+    private float lifeTime = 5.0f;
+
+    protected Vector3 direction;
+
+    // protected so it can be overwritten
+    protected void Start()
+    {
+        Destroy(gameObject, lifeTime);
+    }
+
+    private void Update()
+    {
+        transform.Translate(direction * speed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
+        else if(other.CompareTag("Breakable"))
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+    }
+
+    // takes direction from function caller and sets bullet's direction to given value
+    public void Fire(Vector3 dir)
+    {
+        direction = dir;
+    }
+}
