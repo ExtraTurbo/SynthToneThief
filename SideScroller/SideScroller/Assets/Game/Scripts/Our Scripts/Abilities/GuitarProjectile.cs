@@ -5,14 +5,14 @@ using UnityEngine;
 public class GuitarProjectile : MonoBehaviour
 {
     [SerializeField]
-    protected float speed = 5.0f;
+    private float speed = 5.0f;
     [SerializeField]
     private float lifeTime = 5.0f;
 
-    protected Vector3 direction;
+    private Vector3 direction;
 
     // protected so it can be overwritten
-    protected void Start()
+    private void Start()
     {
         Destroy(gameObject, lifeTime);
     }
