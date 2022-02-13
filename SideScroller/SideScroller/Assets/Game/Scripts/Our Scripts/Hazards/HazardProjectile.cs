@@ -30,11 +30,10 @@ public class HazardProjectile : MonoBehaviour
 
     protected void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-
-        }
-        else if (other.CompareTag("Wall") || gameObject.tag == other.tag)
+        // if the projectile hit the player, a wall,
+        // or an object with the same tag (breakable, shieldable, growable),
+        // destroy the projectile
+        if (other.CompareTag("Player") || other.CompareTag("Wall") || gameObject.tag == other.tag)
         {
             Destroy(gameObject);
         }

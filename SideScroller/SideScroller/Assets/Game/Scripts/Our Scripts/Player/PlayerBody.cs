@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PlayerBody : MonoBehaviour
 {
-    // Properties
+    [SerializeField]
+    private Transform bodyPos;
     public Transform BodyPos
     {
         get { return bodyPos; }
     }
 
+    private static bool shieldAvailable;
     public static bool ShieldAvailable
     {
         set { shieldAvailable = value; }
@@ -26,42 +28,29 @@ public class PlayerBody : MonoBehaviour
     private GameObject fluteProjectile;
     [SerializeField]
     private GameObject fireLocation;
-    [SerializeField]
-    private Transform bodyPos;
-    [SerializeField]
-    private float beamLifetime;
 
-    private static bool shieldAvailable;
+    [SerializeField]
+    private float guitarCooldown;
+    [SerializeField]
+    private float beamLifetime = 0.25f;
+
+    private bool guitarAvailable;
     private static bool beamAvailable;
     private GameObject fluteBeam;
 
     private void Awake()
     {
+        guitarAvailable = true;
         shieldAvailable = true;
         beamAvailable = true;
         fluteBeam = null;
-
-        beamLifetime = 0.25f;
     }
 
     public void Attack()
     {
-        if(guitarProjectile && fireLocation)
+        if(guitarAvailable && guitarProjectile && fireLocation)
         {
-            Vector3 bulletStartPos = fireLocation.transform.position;
-
-            // get direction player is facing
-            Vector3 bulletDirection = bulletStartPos - bodyPos.position;
-
-            bulletDirection.z = 0.0f; // no movement in the z-axis
-            bulletDirection.Normalize(); // normalize the direction of the bullet
-
-            // instantiate a new projectile
-            GameObject bulletGO = GameObject.Instantiate(guitarProjectile, bulletStartPos, Quaternion.identity);
-            bulletGO.SetActive(true); // set bullet as active
-
-            // set the direction of the bullet
-            bulletGO.GetComponent<GuitarProjectile>().Fire(bulletDirection);
+            StartCoroutine(GuitarAtk());
         }
     }
     
@@ -126,7 +115,31 @@ public class PlayerBody : MonoBehaviour
         bodyPos.rotation = Quaternion.LookRotation(aimDir); // converts passed in Vector3 into a Quaternion
     }
 
-    IEnumerator BeamCooldown()
+    private IEnumerator GuitarAtk()
+    {
+        guitarAvailable = false;
+
+        Vector3 bulletStartPos = fireLocation.transform.position;
+
+        // get direction player is facing
+        Vector3 bulletDirection = bulletStartPos - bodyPos.position;
+
+        bulletDirection.z = 0.0f; // no movement in the z-axis
+        bulletDirection.Normalize(); // normalize the direction of the bullet
+
+        // instantiate a new projectile
+        GameObject bulletGO = GameObject.Instantiate(guitarProjectile, bulletStartPos, Quaternion.identity);
+        bulletGO.SetActive(true); // set bullet as active
+
+        // set the direction of the bullet
+        bulletGO.GetComponent<GuitarProjectile>().Fire(bulletDirection);
+
+        yield return new WaitForSeconds(guitarCooldown);
+
+        guitarAvailable = true;
+    }
+
+    private IEnumerator BeamCooldown()
     {
         yield return new WaitForSeconds(beamLifetime);
         GameObject.Destroy(fluteBeam);
