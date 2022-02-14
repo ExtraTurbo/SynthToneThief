@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WorldStatus : MonoBehaviour
 {
-    [SerializeField]
     private int phase = 0; // phase 0 = b/w, 1 = red, 2 = blue, 3 = yellow
     public int Phase
     {
