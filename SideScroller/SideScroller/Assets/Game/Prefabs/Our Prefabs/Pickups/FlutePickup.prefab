@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 2232413467431111168}
   - component: {fileID: 6302932452864406693}
   m_Layer: 0
-  m_Name: GuitarPickup
-  m_TagString: GuitarPickup
+  m_Name: FlutePickup
+  m_TagString: FlutePickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 497cd03494c45f84298c7db16d7b411b, type: 2}
+  - {fileID: 2100000, guid: ac85469f5d0de5e44b0305660c452704, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
