@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6302932452864406693}
   m_Layer: 0
   m_Name: GuitarPickup
-  m_TagString: GuitarPickup
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

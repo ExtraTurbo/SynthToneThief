@@ -19,21 +19,10 @@ public class ShieldBubble : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
-        else if (other.CompareTag("Spikes"))
-        {
-            StartCoroutine(SetSpikeDmg(other, other.GetComponent<Hazard>().damage));
-        }
     }
 
     private void OnDestroy()
     {
         PlayerBody.ShieldAvailable = true;
-    }
-
-    private IEnumerator SetSpikeDmg(Collider other, int dmg)
-    {
-        other.GetComponent<Hazard>().damage = 0;
-        yield return new WaitForSeconds(0.25f);
-        other.GetComponent<Hazard>().damage = dmg;
     }
 }

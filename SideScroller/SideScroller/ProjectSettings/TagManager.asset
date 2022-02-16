@@ -20,7 +20,6 @@ TagManager:
   - GuitarPickup
   - DrumPickup
   - FlutePickup
-  - Spikes
   layers:
   - Default
   - TransparentFX
