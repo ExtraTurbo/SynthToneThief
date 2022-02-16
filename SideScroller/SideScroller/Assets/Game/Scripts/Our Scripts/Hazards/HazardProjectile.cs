@@ -35,7 +35,10 @@ public class HazardProjectile : MonoBehaviour
         // destroy the projectile
         if (other.CompareTag("Player") || other.CompareTag("Wall") || gameObject.tag == other.tag)
         {
-            Destroy(gameObject);
+            if(!other.CompareTag("Growable"))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 

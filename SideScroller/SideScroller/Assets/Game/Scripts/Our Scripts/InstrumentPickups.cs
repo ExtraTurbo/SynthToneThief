@@ -9,7 +9,7 @@ public class InstrumentPickups : MonoBehaviour
 
     private void Awake()
     {
-        if(!world)
+        if(world == null)
         {
             Debug.Log("'InstrumentPickup' script is missing 'WorldStatus' script -- assign in Inspector");
         }
