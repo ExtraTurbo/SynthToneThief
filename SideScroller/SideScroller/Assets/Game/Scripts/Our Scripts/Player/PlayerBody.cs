@@ -77,7 +77,7 @@ public class PlayerBody : MonoBehaviour
 
             fluteBeam = new GameObject();
             fluteBeam.transform.SetParent(gameObject.transform);
-            fluteBeam.tag = "Beam";
+            //fluteBeam.tag = "Beam";
             fluteBeam.transform.position = bodyPos.position;
             fluteBeam.AddComponent<LineRenderer>();
             LineRenderer beam = fluteBeam.GetComponent<LineRenderer>();
