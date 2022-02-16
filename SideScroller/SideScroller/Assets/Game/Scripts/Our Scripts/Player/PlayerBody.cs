@@ -122,7 +122,6 @@ public class PlayerBody : MonoBehaviour
             // create the beam game object
             fluteBeam = new GameObject();
             fluteBeam.transform.SetParent(gameObject.transform);
-            fluteBeam.tag = "Beam";
             fluteBeam.transform.position = bodyPos.position;
             fluteBeam.AddComponent<LineRenderer>();
 
@@ -156,14 +155,17 @@ public class PlayerBody : MonoBehaviour
                     }
                     else
                     {
-                        // try to find a Mushroom component (script) on the object's parent
-                        // (in case we hit the cap/stem colliders instead of the mushroom's collider)
-                        hitInfo.collider.transform.parent.TryGetComponent<Mushroom>(out component);
-
-                        // if the parent has a Mushroom component, call the Scale function
-                        if(component != null)
+                        if(hitInfo.collider.transform.parent != null)
                         {
-                            component.Scale();
+                            // try to find a Mushroom component (script) on the object's parent
+                            // (in case we hit the cap/stem colliders instead of the mushroom's collider)
+                            hitInfo.collider.transform.parent.TryGetComponent<Mushroom>(out component);
+
+                            // if the parent has a Mushroom component, call the Scale function
+                            if (component != null)
+                            {
+                                component.Scale();
+                            }
                         }
                     }
                 }

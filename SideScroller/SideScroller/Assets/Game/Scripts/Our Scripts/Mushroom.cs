@@ -28,6 +28,8 @@ public class Mushroom : MonoBehaviour
     Vector3 capScale;
     Vector3 capPosition;
 
+    private Quaternion rot;
+
     private void Awake()
     {
         grown = false;
@@ -35,6 +37,7 @@ public class Mushroom : MonoBehaviour
         stemScale = mushroomStem.transform.localScale;
         capScale = mushroomCap.transform.localScale;
         capPosition = mushroomCap.transform.position;
+        rot = transform.rotation;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -88,11 +91,40 @@ public class Mushroom : MonoBehaviour
             
             capScale = Vector3.Lerp(capStart, capStart + new Vector3(0.9f, 0.1f, 0.9f), timeElapsed / growSpeed);
             mushroomCap.transform.localScale = capScale;
-            
-            capPosition = Vector3.Lerp(capPosStart, capPosStart + new Vector3(0.0f, 2.2f, 0.0f), timeElapsed / growSpeed);
-            mushroomCap.transform.position = capPosition;
 
-            gameObject.transform.position = Vector3.Lerp(mushroomPosStart, mushroomPosStart + new Vector3(0.0f, 0.75f, 0.0f), timeElapsed / growSpeed);
+            Debug.Log("Euler Rot Z: " + rot.eulerAngles.z.ToString());
+
+            switch(Mathf.RoundToInt(rot.eulerAngles.z))
+            {
+                case 90:
+                    capPosition = Vector3.Lerp(capPosStart, capPosStart - new Vector3(2.4f, 0.0f, 0.0f), timeElapsed / growSpeed);
+                    mushroomCap.transform.position = capPosition;
+
+                    gameObject.transform.position = Vector3.Lerp(mushroomPosStart, mushroomPosStart - new Vector3(1.25f, 0.0f, 0.0f), timeElapsed / growSpeed);
+
+                    break;
+                case 270:
+                    capPosition = Vector3.Lerp(capPosStart, capPosStart + new Vector3(2.4f, 0.0f, 0.0f), timeElapsed / growSpeed);
+                    mushroomCap.transform.position = capPosition;
+
+                    gameObject.transform.position = Vector3.Lerp(mushroomPosStart, mushroomPosStart + new Vector3(1.25f, 0.0f, 0.0f), timeElapsed / growSpeed);
+
+                    break;
+                case 145:
+                    capPosition = Vector3.Lerp(capPosStart, capPosStart - new Vector3(1.3f, 1.75f, 0.0f), timeElapsed / growSpeed);
+                    mushroomCap.transform.position = capPosition;
+
+                    gameObject.transform.position = Vector3.Lerp(mushroomPosStart, mushroomPosStart - new Vector3(0.75f, 0.75f, 0.0f), timeElapsed / growSpeed);
+
+                    break;
+                default:
+                    capPosition = Vector3.Lerp(capPosStart, capPosStart + new Vector3(0.0f, 2.2f, 0.0f), timeElapsed / growSpeed);
+                    mushroomCap.transform.position = capPosition;
+
+                    gameObject.transform.position = Vector3.Lerp(mushroomPosStart, mushroomPosStart + new Vector3(0.0f, 0.75f, 0.0f), timeElapsed / growSpeed);
+
+                    break;
+            }
 
             gameObject.GetComponent<BoxCollider>().size = Vector3.Lerp(colliderStart, colliderStart + new Vector3(1.0f, 2.3f, 1.0f), timeElapsed / growSpeed);
 
@@ -135,17 +167,39 @@ public class Mushroom : MonoBehaviour
             capScale = Vector3.Lerp(capStart, capStart - new Vector3(0.9f, 0.1f, 0.9f), timeElapsed / growSpeed);
             mushroomCap.transform.localScale = capScale;
 
-            capPosition = Vector3.Lerp(capPosStart, capPosStart - new Vector3(0.0f, 2.2f, 0.0f), timeElapsed / growSpeed);
-            mushroomCap.transform.position = capPosition;
-
-            gameObject.transform.position = Vector3.Lerp(mushroomPosStart, mushroomPosStart - new Vector3(0.0f, 0.75f, 0.0f), timeElapsed / growSpeed);
-
-            gameObject.GetComponent<BoxCollider>().size = Vector3.Lerp(colliderStart, colliderStart - new Vector3(1.0f, 2.4f, 1.0f), timeElapsed / growSpeed);
-
-            if(distanceCapWall != new Vector3())
+            switch (Mathf.RoundToInt(rot.eulerAngles.z))
             {
-                mushCapScript.Pushing.transform.position = mushroomCap.transform.position + distanceCapWall;
+                case 90:
+                    capPosition = Vector3.Lerp(capPosStart, capPosStart + new Vector3(2.4f, 0.0f, 0.0f), timeElapsed / growSpeed);
+                    mushroomCap.transform.position = capPosition;
+
+                    gameObject.transform.position = Vector3.Lerp(mushroomPosStart, mushroomPosStart + new Vector3(1.25f, 0.0f, 0.0f), timeElapsed / growSpeed);
+
+                    break;
+                case 270:
+                    capPosition = Vector3.Lerp(capPosStart, capPosStart - new Vector3(2.4f, 0.0f, 0.0f), timeElapsed / growSpeed);
+                    mushroomCap.transform.position = capPosition;
+
+                    gameObject.transform.position = Vector3.Lerp(mushroomPosStart, mushroomPosStart - new Vector3(1.25f, 0.0f, 0.0f), timeElapsed / growSpeed);
+
+                    break;
+                case 145:
+                    capPosition = Vector3.Lerp(capPosStart, capPosStart + new Vector3(1.3f, 1.75f, 0.0f), timeElapsed / growSpeed);
+                    mushroomCap.transform.position = capPosition;
+
+                    gameObject.transform.position = Vector3.Lerp(mushroomPosStart, mushroomPosStart + new Vector3(0.75f, 0.75f, 0.0f), timeElapsed / growSpeed);
+
+                    break;
+                default:
+                    capPosition = Vector3.Lerp(capPosStart, capPosStart - new Vector3(0.0f, 2.2f, 0.0f), timeElapsed / growSpeed);
+                    mushroomCap.transform.position = capPosition;
+
+                    gameObject.transform.position = Vector3.Lerp(mushroomPosStart, mushroomPosStart - new Vector3(0.0f, 0.75f, 0.0f), timeElapsed / growSpeed);
+
+                    break;
             }
+
+            gameObject.GetComponent<BoxCollider>().size = Vector3.Lerp(colliderStart, colliderStart - new Vector3(1.0f, 2.3f, 1.0f), timeElapsed / growSpeed);
 
             timeElapsed += Time.deltaTime;
             yield return null;
