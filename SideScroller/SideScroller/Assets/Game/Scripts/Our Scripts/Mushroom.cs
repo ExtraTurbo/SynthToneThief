@@ -12,6 +12,9 @@ public class Mushroom : MonoBehaviour
     [SerializeField]
     private float growSpeed = 1.5f;
 
+    [SerializeField]
+    private float playerDistanceToShrinkPhysicsShroom = 2.5f;
+
     public bool Grown
     {
         get { return grown; }
@@ -24,20 +27,33 @@ public class Mushroom : MonoBehaviour
     }
     private bool growing;
 
+    public bool Shrinkable
+    {
+        set { shrinkable = value; }
+    }
+    private bool shrinkable;
+
     Vector3 stemScale;
     Vector3 capScale;
     Vector3 capPosition;
 
     private Quaternion rot;
 
+    private GameObject player;
+    private float playerDistanceX;
+    private float playerDistanceY;
+
     private void Awake()
     {
         grown = false;
         growing = false;
+        shrinkable = true;
         stemScale = mushroomStem.transform.localScale;
         capScale = mushroomCap.transform.localScale;
         capPosition = mushroomCap.transform.position;
         rot = transform.rotation;
+
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -56,9 +72,20 @@ public class Mushroom : MonoBehaviour
             {
                 StartCoroutine(Grow());
             }
-            else
+            else if(shrinkable)
             {
                 StartCoroutine(Shrink());
+            }
+            else
+            {
+                playerDistanceX = Mathf.Abs(gameObject.transform.position.x - player.transform.position.x);
+                playerDistanceY = Mathf.Abs(gameObject.transform.position.y - player.transform.position.y);
+                Debug.Log("Player Distance X from Physics Shroom: " + playerDistanceX.ToString());
+                Debug.Log("Player Distance Y from Physics Shroom: " + playerDistanceY.ToString());
+                if (playerDistanceX > playerDistanceToShrinkPhysicsShroom || playerDistanceY > playerDistanceToShrinkPhysicsShroom)
+                {
+                    StartCoroutine(Shrink());
+                }
             }
         }
     }

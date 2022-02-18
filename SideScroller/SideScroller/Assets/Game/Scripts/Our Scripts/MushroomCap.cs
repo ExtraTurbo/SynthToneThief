@@ -21,6 +21,7 @@ public class MushroomCap : MonoBehaviour
         if(collision.gameObject.CompareTag("Wall") && pushing == null)
         {
             isPushMushroom = true;
+            gameObject.transform.parent.GetComponent<Mushroom>().Shrinkable = false;
             pushing = collision.gameObject;
 
             Debug.Log("Pushing Object: " + collision.gameObject.name);
