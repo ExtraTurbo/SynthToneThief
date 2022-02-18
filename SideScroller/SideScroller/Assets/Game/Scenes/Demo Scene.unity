@@ -16593,6 +16593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   world: {fileID: 1647735329}
   playerBody: {fileID: 580771825}
+  globalCooldown: 0.1
 --- !u!1 &741713671
 GameObject:
   m_ObjectHideFlags: 0
@@ -47041,6 +47042,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1244776362701331876, guid: ae336466c8e038a42a715c2094affabe,
+        type: 3}
+      propertyPath: beamLifetime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1244776362701331876, guid: ae336466c8e038a42a715c2094affabe,
         type: 3}
       propertyPath: beamMaterial

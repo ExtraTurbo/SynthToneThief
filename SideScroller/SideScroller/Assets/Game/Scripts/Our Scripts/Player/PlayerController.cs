@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour
     private WorldStatus world;
     [SerializeField]
     private PlayerBody playerBody;
+    [SerializeField]
+    private float globalCooldown = 0.1f;
+
+    private bool gcd = false;
 
     private void Update()
     {
@@ -17,21 +21,30 @@ public class PlayerController : MonoBehaviour
 
     private void CheckForFire()
     {
-        bool checkForPrimaryFire = Input.GetButtonDown("Fire1");
-        bool checkForSecondaryFire = Input.GetButtonDown("Fire2");
-        bool checkForTertiaryFire = Input.GetButtonDown("Fire3");
+        if(!gcd)
+        {
+            bool checkForPrimaryFire = Input.GetButtonDown("Fire1");
+            bool checkForSecondaryFire = Input.GetButtonDown("Fire2");
+            bool checkForTertiaryFire = Input.GetButtonDown("Fire3");
 
-        if(playerBody && world.Phase >= 3 && checkForTertiaryFire)
-        {
-            playerBody.Beam();
-        }
-        else if (playerBody && world.Phase >= 2 && checkForSecondaryFire)
-        {
-            playerBody.Shield();
-        }
-        else if (playerBody && world.Phase >= 1 && checkForPrimaryFire)
-        {
-            playerBody.Attack();
+            if (playerBody && world.Phase >= 3 && checkForTertiaryFire)
+            {
+                gcd = true;
+                playerBody.Beam();
+                StartCoroutine(GlobalCooldown());
+            }
+            else if (playerBody && world.Phase >= 2 && checkForSecondaryFire)
+            {
+                gcd = true;
+                playerBody.Shield();
+                StartCoroutine(GlobalCooldown());
+            }
+            else if (playerBody && world.Phase >= 1 && checkForPrimaryFire)
+            {
+                gcd = true;
+                playerBody.Attack();
+                StartCoroutine(GlobalCooldown());
+            }
         }
     }
 
@@ -48,5 +61,11 @@ public class PlayerController : MonoBehaviour
         aimDir.z = 0.0f; // not allowing movement in z-axis
 
         playerBody.UpdateAimDirection(aimDir);
+    }
+
+    private IEnumerator GlobalCooldown()
+    {
+        yield return new WaitForSeconds(globalCooldown);
+        gcd = false;
     }
 }

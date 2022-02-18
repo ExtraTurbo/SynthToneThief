@@ -6,10 +6,13 @@ public class ShieldBubble : MonoBehaviour
 {
     [SerializeField]
     private float lifeTime = 3.0f;
+    public float LifeTime
+    {
+        get { return lifeTime; }
+    }
 
     void Start()
     {
-        PlayerBody.ShieldAvailable = false;
         Destroy(gameObject, lifeTime);
     }
 
@@ -25,15 +28,10 @@ public class ShieldBubble : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
-    {
-        PlayerBody.ShieldAvailable = true;
-    }
-
     private IEnumerator SetSpikeDmg(Collider other, int dmg)
     {
         other.GetComponent<Hazard>().damage = 0;
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.15f);
         other.GetComponent<Hazard>().damage = dmg;
     }
 }
