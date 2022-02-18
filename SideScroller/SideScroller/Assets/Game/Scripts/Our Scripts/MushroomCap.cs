@@ -27,4 +27,10 @@ public class MushroomCap : MonoBehaviour
             Debug.Log("Pushing Object: " + collision.gameObject.name);
         }
     }
+
+    public void ResetPushing()
+    {
+        isPushMushroom = false;
+        pushing = null;
+    }
 }

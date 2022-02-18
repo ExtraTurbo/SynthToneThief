@@ -107,6 +107,11 @@ public class Mushroom : MonoBehaviour
         {
             distanceCapWall = mushCapScript.Pushing.transform.position - capPosStart;
             Debug.Log("Distance Cap Wall = " + distanceCapWall);
+
+            if(distanceCapWall.x >= 3.0f)
+            {
+                mushCapScript.ResetPushing();
+            }
         }
 
         mushroomCap.GetComponent<BoxCollider>().enabled = true;
@@ -155,7 +160,7 @@ public class Mushroom : MonoBehaviour
 
             gameObject.GetComponent<BoxCollider>().size = Vector3.Lerp(colliderStart, colliderStart + new Vector3(1.0f, 2.3f, 1.0f), timeElapsed / growSpeed);
 
-            if (distanceCapWall != new Vector3())
+            if (distanceCapWall != new Vector3() && mushCapScript.Pushing)
             {
                 mushCapScript.Pushing.transform.position = mushroomCap.transform.position + distanceCapWall;
             }
