@@ -188,9 +188,9 @@ public class PlayerBody : MonoBehaviour
             Debug.Log("Hit info: " + hitInfo.transform.name);
 
             // if the raycast hit an object tagged "Growable"
-            if(hitInfo.collider.CompareTag("GuitarProjectile"))
+            if(hitInfo.collider.CompareTag("GuitarProjectile") || !hitInfo.collider.CompareTag("Growable"))
             {
-                // hit a guitar projectile bc player is a spam lord
+                // hit something irrelevant
             }
             else if (hitInfo.collider.CompareTag("Growable") || hitInfo.collider.transform.parent.CompareTag("Growable"))
             {
