@@ -53,6 +53,10 @@ public class PlayerBody : MonoBehaviour
         {
             Debug.LogError("There is no Material assigned for the Beam. Please assign a Material to the PlayerBody component (on Liam)!");
         }
+
+        HUDManager.Instance.GuitarCooldown = guitarCooldown;
+        HUDManager.Instance.DrumCooldown = 0.0f; // set in DrumShield coroutine
+        HUDManager.Instance.FluteCooldown = beamCooldown + beamLifetime;
     }
 
     public void Attack()
@@ -109,6 +113,7 @@ public class PlayerBody : MonoBehaviour
             // set the direction of the bullet
             bulletGO.GetComponent<GuitarProjectile>().Fire(bulletDirection);
 
+            HUDManager.Instance.CurrentGuitarCooldown = HUDManager.Instance.GuitarCooldown;
             yield return new WaitForSeconds(guitarCooldown);
         }
 
@@ -120,6 +125,14 @@ public class PlayerBody : MonoBehaviour
         shieldAvailable = false;
         GameObject shieldGO = GameObject.Instantiate(shieldBubble, CharacterBody.transform);
         shieldGO.SetActive(true);
+
+        if(HUDManager.Instance.DrumCooldown == 0.0f)
+        {
+            HUDManager.Instance.DrumCooldown = shieldCooldown + shieldGO.GetComponent<ShieldBubble>().LifeTime;
+        }
+        
+        HUDManager.Instance.CurrentDrumCooldown = HUDManager.Instance.DrumCooldown;
+
         yield return new WaitForSeconds(shieldCooldown + shieldGO.GetComponent<ShieldBubble>().LifeTime);
         shieldAvailable = true;
     }
@@ -232,11 +245,13 @@ public class PlayerBody : MonoBehaviour
 
     private IEnumerator BeamCooldown()
     {
+        HUDManager.Instance.CurrentFluteCooldown = HUDManager.Instance.FluteCooldown;
         yield return new WaitForSeconds(beamLifetime);
 
         LineRenderer.Destroy(fluteBeam.GetComponent<LineRenderer>());
         GameObject.Destroy(fluteBeam);
         fluteBeam = null;
+
         yield return new WaitForSeconds(beamCooldown);
         beamAvailable = true;
     }
