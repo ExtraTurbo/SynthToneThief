@@ -76,9 +76,20 @@ public class HUDManager : MonoBehaviour
 
     private void Update()
     {
-        UpdateGuitarTimer();
-        UpdateDrumTimer();
-        UpdateFluteTimer();
+        if(WorldStatus.Instance.Phase >= 1)
+        {
+            UpdateGuitarTimer();
+
+            if(WorldStatus.Instance.Phase >= 2)
+            {
+                UpdateDrumTimer();
+
+                if(WorldStatus.Instance.Phase == 3)
+                {
+                    UpdateFluteTimer();
+                }
+            }
+        }
     }
 
     private void UpdateGuitarTimer()

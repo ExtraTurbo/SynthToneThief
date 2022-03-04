@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
     private WorldStatus world;
+
     [SerializeField]
     private PlayerBody playerBody;
     [SerializeField]
     private float globalCooldown = 0.1f;
 
     private bool gcd = false;
+
+    private void Start()
+    {
+        world = WorldStatus.Instance;
+    }
 
     private void Update()
     {

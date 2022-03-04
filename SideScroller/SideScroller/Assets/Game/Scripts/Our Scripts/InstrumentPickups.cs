@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class InstrumentPickups : MonoBehaviour
 {
-    [SerializeField]
     private WorldStatus world;
 
-    private void Awake()
+    private void Start()
     {
+        world = WorldStatus.Instance;
+
         if(world == null)
         {
             Debug.Log("'InstrumentPickup' script is missing 'WorldStatus' script -- assign in Inspector");
