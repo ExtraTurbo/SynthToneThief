@@ -12,9 +12,9 @@ public class GuitarProjectile : MonoBehaviour
     private Vector3 direction;
 
     // protected so it can be overwritten
-    private void Start()
+    private void OnEnable()
     {
-        Destroy(gameObject, lifeTime);
+        StartCoroutine(DisableTimer());
     }
 
     private void Update()
@@ -26,7 +26,7 @@ public class GuitarProjectile : MonoBehaviour
     {
         if(other.CompareTag("Wall"))
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else if(other.CompareTag("Breakable"))
         {
@@ -38,8 +38,8 @@ public class GuitarProjectile : MonoBehaviour
             {
                 Destroy(other.gameObject);
             }
-            
-            Destroy(gameObject);
+
+            gameObject.SetActive(false);
         }
     }
 
@@ -47,5 +47,11 @@ public class GuitarProjectile : MonoBehaviour
     public void Fire(Vector3 dir)
     {
         direction = dir;
+    }
+
+    private IEnumerator DisableTimer()
+    {
+        yield return new WaitForSeconds(lifeTime);
+        gameObject.SetActive(false);
     }
 }

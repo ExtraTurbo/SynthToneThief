@@ -13,8 +13,7 @@ public class PlayerBody : MonoBehaviour
 
     [SerializeField]
     private Transform CharacterBody;
-    [SerializeField]
-    private GameObject guitarProjectile;
+
     [SerializeField]
     private GameObject shieldBubble;
     [SerializeField]
@@ -58,7 +57,7 @@ public class PlayerBody : MonoBehaviour
 
     public void Attack()
     {
-        if(guitarAvailable && guitarProjectile && fireLocation)
+        if(guitarAvailable && fireLocation)
         {
             StartCoroutine(GuitarAtk());
         }
@@ -99,13 +98,19 @@ public class PlayerBody : MonoBehaviour
         bulletDirection.Normalize(); // normalize the direction of the bullet
 
         // instantiate a new projectile
-        GameObject bulletGO = GameObject.Instantiate(guitarProjectile, bulletStartPos, Quaternion.identity);
-        bulletGO.SetActive(true); // set bullet as active
+        GameObject bulletGO = ObjectPoolManager.Instance.GetPooledObject(ObjectPoolManager.PoolTypes.GUITARPROJECTILE);
 
-        // set the direction of the bullet
-        bulletGO.GetComponent<GuitarProjectile>().Fire(bulletDirection);
+        if (bulletGO != null)
+        {
+            bulletGO.transform.position = fireLocation.transform.position;
 
-        yield return new WaitForSeconds(guitarCooldown);
+            bulletGO.SetActive(true); // set bullet as active
+
+            // set the direction of the bullet
+            bulletGO.GetComponent<GuitarProjectile>().Fire(bulletDirection);
+
+            yield return new WaitForSeconds(guitarCooldown);
+        }
 
         guitarAvailable = true;
     }

@@ -10,7 +10,7 @@ public class ObjectPoolManager : MonoBehaviour
         get { return instance; }
     }
 
-    public enum PoolTypes { REDTURRET, BLUETURRET, YELLOWTURRET }
+    public enum PoolTypes { REDTURRET, BLUETURRET, YELLOWTURRET, GUITARPROJECTILE }
 
     [SerializeField]
     private ObjectPool[] objectPools; // order must match order of enum pool types
