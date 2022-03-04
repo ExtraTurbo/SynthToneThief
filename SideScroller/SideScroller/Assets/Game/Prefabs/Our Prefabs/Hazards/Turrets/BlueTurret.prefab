@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 4959340174349845908}
   m_Layer: 0
   m_Name: BlueTurret
-  m_TagString: Untagged
+  m_TagString: BlueTurret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

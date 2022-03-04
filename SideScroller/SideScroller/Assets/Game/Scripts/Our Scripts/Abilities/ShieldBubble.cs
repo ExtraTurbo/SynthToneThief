@@ -20,7 +20,7 @@ public class ShieldBubble : MonoBehaviour
     {
         if (other.CompareTag("Shieldable"))
         {
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
         }
         else if (other.CompareTag("Spikes"))
         {

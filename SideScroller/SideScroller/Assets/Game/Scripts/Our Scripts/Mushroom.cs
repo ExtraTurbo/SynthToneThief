@@ -60,7 +60,7 @@ public class Mushroom : MonoBehaviour
     {
         if(other.tag == gameObject.tag && grown)
         {
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
         }
     }
 

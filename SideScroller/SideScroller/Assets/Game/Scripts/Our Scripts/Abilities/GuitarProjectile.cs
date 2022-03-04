@@ -30,7 +30,15 @@ public class GuitarProjectile : MonoBehaviour
         }
         else if(other.CompareTag("Breakable"))
         {
-            Destroy(other.gameObject);
+            if(other.TryGetComponent<HazardProjectile>(out HazardProjectile projectile))
+            {
+                other.gameObject.SetActive(false);
+            }
+            else
+            {
+                Destroy(other.gameObject);
+            }
+            
             Destroy(gameObject);
         }
     }

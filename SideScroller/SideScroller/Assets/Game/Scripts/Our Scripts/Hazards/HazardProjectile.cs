@@ -10,7 +10,7 @@ public class HazardProjectile : MonoBehaviour
         set { speed = value; }
     }
 
-    private float lifeTime;
+    private float lifeTime = 0;
     public float LifeTime
     {
         set { lifeTime = value; }
@@ -18,9 +18,9 @@ public class HazardProjectile : MonoBehaviour
 
     private Vector3 direction;
 
-    protected void Start()
+    protected void OnEnable()
     {
-        Destroy(gameObject, lifeTime);
+        StartCoroutine(DisableTimer());
     }
 
     protected void Update()
@@ -32,12 +32,12 @@ public class HazardProjectile : MonoBehaviour
     {
         // if the projectile hit the player, a wall,
         // or an object with the same tag (breakable, shieldable, growable),
-        // destroy the projectile
+        // disable the projectile
         if (other.CompareTag("Player") || other.CompareTag("Wall") || gameObject.tag == other.tag)
         {
             if(!other.CompareTag("Growable"))
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
         }
     }
@@ -45,5 +45,11 @@ public class HazardProjectile : MonoBehaviour
     public void Fire(Vector3 dir)
     {
         direction = dir;
+    }
+    
+    private IEnumerator DisableTimer()
+    {
+        yield return new WaitForSeconds(lifeTime);
+        gameObject.SetActive(false);
     }
 }
