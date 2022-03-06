@@ -13,7 +13,13 @@ public class HUDManager : MonoBehaviour
 
     // GUITAR VALUES //
     [SerializeField]
+    private Text guitarKeybindText;
+
+    [SerializeField]
     private Text guitarCooldownText;
+    [SerializeField]
+    private Slider guitarCooldownSlider;
+
     [SerializeField]
     private Image guitarAbilityImage;
     [SerializeField]
@@ -36,7 +42,13 @@ public class HUDManager : MonoBehaviour
 
     // DRUM VALUES //
     [SerializeField]
+    private Text drumKeybindText;
+
+    [SerializeField]
     private Text drumCooldownText;
+    [SerializeField]
+    private Slider drumCooldownSlider;
+
     [SerializeField]
     private Image drumAbilityImage;
     [SerializeField]
@@ -59,7 +71,13 @@ public class HUDManager : MonoBehaviour
 
     // FLUTE VALUES //
     [SerializeField]
+    private Text fluteKeybindText;
+
+    [SerializeField]
     private Text fluteCooldownText;
+    [SerializeField]
+    private Slider fluteCooldownSlider;
+
     [SerializeField]
     private Image fluteAbilityImage;
     [SerializeField]
@@ -103,6 +121,8 @@ public class HUDManager : MonoBehaviour
             if(guitarUnlock == false)
             {
                 guitarAbilityImage.sprite = guitarUnlockSprite;
+                guitarKeybindText.gameObject.SetActive(true);
+                guitarCooldownSlider.gameObject.SetActive(true);
                 guitarUnlock = true;
             }
 
@@ -113,6 +133,8 @@ public class HUDManager : MonoBehaviour
                 if(drumUnlock == false)
                 {
                     drumAbilityImage.sprite = drumUnlockSprite;
+                    drumKeybindText.gameObject.SetActive(true);
+                    drumCooldownSlider.gameObject.SetActive(true);
                     drumUnlock = true;
                 }
 
@@ -123,6 +145,8 @@ public class HUDManager : MonoBehaviour
                     if(fluteUnlock == false)
                     {
                         fluteAbilityImage.sprite = fluteUnlockSprite;
+                        fluteKeybindText.gameObject.SetActive(true);
+                        fluteCooldownSlider.gameObject.SetActive(true);
                         fluteUnlock = true;
                     }
 
@@ -143,15 +167,18 @@ public class HUDManager : MonoBehaviour
 
             if (currentGuitarCooldown != 0)
             {
+                guitarCooldownSlider.value = 1.0f - (currentGuitarCooldown / guitarCooldown);
                 guitarCooldownText.text = currentGuitarCooldown.ToString("0.0");
             }
             else
             {
+                guitarCooldownSlider.value = 1.0f;
                 guitarCooldownText.text = "";
             }
         }
         else
         {
+            guitarCooldownSlider.value = 1.0f;
             guitarCooldownText.text = "";
         }
     }
@@ -167,15 +194,18 @@ public class HUDManager : MonoBehaviour
 
             if (currentDrumCooldown != 0)
             {
+                drumCooldownSlider.value = 1.0f - (currentDrumCooldown / drumCooldown);
                 drumCooldownText.text = currentDrumCooldown.ToString("0.0");
             }
             else
             {
+                drumCooldownSlider.value = 1.0f;
                 drumCooldownText.text = "";
             }
         }
         else
         {
+            drumCooldownSlider.value = 1.0f;
             drumCooldownText.text = "";
         }
     }
@@ -191,15 +221,18 @@ public class HUDManager : MonoBehaviour
 
             if(currentFluteCooldown != 0)
             {
+                fluteCooldownSlider.value = 1.0f - (currentFluteCooldown / fluteCooldown);
                 fluteCooldownText.text = currentFluteCooldown.ToString("0.0");
             }
             else
             {
+                fluteCooldownSlider.value = 1.0f;
                 fluteCooldownText.text = "";
             }
         }
         else
         {
+            fluteCooldownSlider.value = 1.0f;
             fluteCooldownText.text = "";
         }
     }
