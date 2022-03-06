@@ -14,6 +14,10 @@ public class HUDManager : MonoBehaviour
     // GUITAR VALUES //
     [SerializeField]
     private Text guitarCooldownText;
+    [SerializeField]
+    private Image guitarAbilityImage;
+    [SerializeField]
+    private Sprite guitarUnlockSprite;
 
     private float guitarCooldown;
     public float GuitarCooldown
@@ -28,9 +32,15 @@ public class HUDManager : MonoBehaviour
         set { currentGuitarCooldown = value; }
     }
 
+    private bool guitarUnlock;
+
     // DRUM VALUES //
     [SerializeField]
     private Text drumCooldownText;
+    [SerializeField]
+    private Image drumAbilityImage;
+    [SerializeField]
+    private Sprite drumUnlockSprite;
 
     private float drumCooldown;
     public float DrumCooldown
@@ -45,9 +55,15 @@ public class HUDManager : MonoBehaviour
         set { currentDrumCooldown = value; }
     }
 
+    private bool drumUnlock;
+
     // FLUTE VALUES //
     [SerializeField]
     private Text fluteCooldownText;
+    [SerializeField]
+    private Image fluteAbilityImage;
+    [SerializeField]
+    private Sprite fluteUnlockSprite;
 
     private float fluteCooldown;
     public float FluteCooldown
@@ -62,6 +78,8 @@ public class HUDManager : MonoBehaviour
         set { currentFluteCooldown = value; }
     }
 
+    private bool fluteUnlock;
+
     private void Awake()
     {
         instance = this;
@@ -72,20 +90,42 @@ public class HUDManager : MonoBehaviour
         guitarCooldownText.text = "";
         drumCooldownText.text = "";
         fluteCooldownText.text = "";
+
+        guitarUnlock = false;
+        drumUnlock = false;
+        fluteUnlock = false;
     }
 
     private void Update()
     {
         if(WorldStatus.Instance.Phase >= 1)
         {
+            if(guitarUnlock == false)
+            {
+                guitarAbilityImage.sprite = guitarUnlockSprite;
+                guitarUnlock = true;
+            }
+
             UpdateGuitarTimer();
 
             if(WorldStatus.Instance.Phase >= 2)
             {
+                if(drumUnlock == false)
+                {
+                    drumAbilityImage.sprite = drumUnlockSprite;
+                    drumUnlock = true;
+                }
+
                 UpdateDrumTimer();
 
                 if(WorldStatus.Instance.Phase == 3)
                 {
+                    if(fluteUnlock == false)
+                    {
+                        fluteAbilityImage.sprite = fluteUnlockSprite;
+                        fluteUnlock = true;
+                    }
+
                     UpdateFluteTimer();
                 }
             }
