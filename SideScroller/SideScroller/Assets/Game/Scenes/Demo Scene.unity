@@ -20258,6 +20258,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -2.8000002
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: ac79453cdfd497e4fb70bd15a2766204, type: 3}
+      propertyPath: m_AllowMSAA
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: ac79453cdfd497e4fb70bd15a2766204, type: 3}
       propertyPath: target
       value: 
@@ -20265,7 +20269,7 @@ PrefabInstance:
     - target: {fileID: 1781270631180820360, guid: ac79453cdfd497e4fb70bd15a2766204,
         type: 3}
       propertyPath: antialiasingMode
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac79453cdfd497e4fb70bd15a2766204, type: 3}
