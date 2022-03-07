@@ -27,7 +27,7 @@ public class WorldStatus : MonoBehaviour
     {
         instance = this;
 
-        if (gameObject.CompareTag("Scripts"))
+        if (!gameObject.CompareTag("Scripts"))
         {
             tag = "Scripts";
             Debug.LogWarning("WorldStatus script is assigned to an object without the tag 'Scripts', tag has been assigned automatically", transform);
