@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -2752435258937908984}
   - component: {fileID: 6121638060115955377}
   - component: {fileID: 2354468948343174318}
+  - component: {fileID: 6224323724821769518}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Spikes
@@ -226,3 +227,16 @@ MonoBehaviour:
   effectedTags:
   - Player
   hitSound: {fileID: 0}
+--- !u!114 &6224323724821769518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3021307609076093602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01356646aef100949b8afa9af43723e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hazardScript: {fileID: 2354468948343174318}

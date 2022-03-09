@@ -24,14 +24,7 @@ public class ShieldBubble : MonoBehaviour
         }
         else if (other.CompareTag("Spikes"))
         {
-            StartCoroutine(SetSpikeDmg(other, other.GetComponent<Hazard>().damage));
+            other.gameObject.GetComponent<Spikes>().SetSpikeDmg();
         }
-    }
-
-    private IEnumerator SetSpikeDmg(Collider other, int dmg)
-    {
-        other.GetComponent<Hazard>().damage = 0;
-        yield return new WaitForSeconds(0.15f);
-        other.GetComponent<Hazard>().damage = dmg;
     }
 }
