@@ -129,9 +129,12 @@ public class PlayerBody : MonoBehaviour
         if(HUDManager.Instance.DrumCooldown == 0.0f)
         {
             HUDManager.Instance.DrumCooldown = shieldCooldown + shieldGO.GetComponent<ShieldBubble>().LifeTime;
+            HUDManager.Instance.ShieldDuration = shieldGO.GetComponent<ShieldBubble>().LifeTime;
         }
         
         HUDManager.Instance.CurrentDrumCooldown = HUDManager.Instance.DrumCooldown;
+        HUDManager.Instance.CurrentShieldDuration = HUDManager.Instance.ShieldDuration;
+        
 
         yield return new WaitForSeconds(shieldCooldown + shieldGO.GetComponent<ShieldBubble>().LifeTime);
         shieldAvailable = true;

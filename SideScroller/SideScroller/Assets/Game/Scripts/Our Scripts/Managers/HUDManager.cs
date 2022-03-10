@@ -50,6 +50,11 @@ public class HUDManager : MonoBehaviour
     private Slider drumCooldownSlider;
 
     [SerializeField]
+    private Slider drumDurationSlider;
+    [SerializeField]
+    private Image durationSliderFill;
+
+    [SerializeField]
     private Image drumAbilityImage;
     [SerializeField]
     private Sprite drumUnlockSprite;
@@ -65,6 +70,19 @@ public class HUDManager : MonoBehaviour
     public float CurrentDrumCooldown
     {
         set { currentDrumCooldown = value; }
+    }
+
+    private float shieldDuration;
+    public float ShieldDuration
+    {
+        set { shieldDuration = value; }
+        get { return shieldDuration; }
+    }
+
+    private float currentShieldDuration;
+    public float CurrentShieldDuration
+    {
+        set { currentShieldDuration = value; }
     }
 
     private bool drumUnlock;
@@ -109,6 +127,11 @@ public class HUDManager : MonoBehaviour
         drumCooldownText.text = "";
         fluteCooldownText.text = "";
 
+        currentGuitarCooldown = 0.0f;
+        currentDrumCooldown = 0.0f;
+        currentShieldDuration = 0.0f;
+        currentFluteCooldown = 0.0f;
+
         guitarUnlock = false;
         drumUnlock = false;
         fluteUnlock = false;
@@ -135,6 +158,7 @@ public class HUDManager : MonoBehaviour
                     drumAbilityImage.sprite = drumUnlockSprite;
                     drumKeybindText.gameObject.SetActive(true);
                     drumCooldownSlider.gameObject.SetActive(true);
+                    drumDurationSlider.gameObject.SetActive(true);
                     drumUnlock = true;
                 }
 
@@ -186,6 +210,7 @@ public class HUDManager : MonoBehaviour
     private void UpdateDrumTimer()
     {
         currentDrumCooldown = Mathf.Clamp(currentDrumCooldown, 0.0f, drumCooldown);
+        currentShieldDuration = Mathf.Clamp(currentShieldDuration, 0.0f, shieldDuration);
 
         if (currentDrumCooldown != 0)
         {
@@ -207,6 +232,27 @@ public class HUDManager : MonoBehaviour
         {
             drumCooldownSlider.value = 1.0f;
             drumCooldownText.text = "";
+        }
+
+        if (currentShieldDuration != 0)
+        {
+            durationSliderFill.gameObject.SetActive(true);
+
+            currentShieldDuration -= Time.deltaTime;
+            currentShieldDuration = Mathf.Clamp(currentShieldDuration, 0.0f, shieldDuration);
+
+            if (currentShieldDuration != 0)
+            {
+                drumDurationSlider.value = currentShieldDuration / shieldDuration;
+            }
+            else
+            {
+                durationSliderFill.gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            durationSliderFill.gameObject.SetActive(false);
         }
     }
 
