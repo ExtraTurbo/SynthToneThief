@@ -6,30 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Start Screen.unity
+    path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/demo level.unity
+    path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Level1.unity
+    path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Physics Platformer Kit/Scenes/3D Demo Scene 1.unity
+    path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Physics Platformer Kit/Scenes/3D Demo Scene.unity
+    path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Physics Platformer Kit/Scenes/Demo Scene.unity
+    path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Physics Platformer Kit/Scenes/3D Demo Scene.unity
+    path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Physics Platformer Kit/Scenes/Simple Demo.unity
+    path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Game/Scenes/Demo Scene.unity
-    guid: 4b8b887c648536940907c405f88b2333
+    path: Assets/Game/Scenes/MainMenu.unity
+    guid: ea09c238e526d1b43b7018ce710e7c44
+  - enabled: 1
+    path: Assets/Game/Scenes/GameLevel.unity
+    guid: 27f059f27aaaed643ab97cedad0e3556
   m_configObjects: {}
