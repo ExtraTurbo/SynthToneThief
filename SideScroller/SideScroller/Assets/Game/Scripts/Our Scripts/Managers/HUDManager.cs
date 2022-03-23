@@ -11,6 +11,9 @@ public class HUDManager : MonoBehaviour
         get { return instance; }
     }
 
+    [SerializeField]
+    PlayerBody playerBody;
+
     // GUITAR VALUES //
     [SerializeField]
     private Text guitarKeybindText;
@@ -157,7 +160,7 @@ public class HUDManager : MonoBehaviour
                 {
                     drumAbilityImage.sprite = drumUnlockSprite;
                     drumKeybindText.gameObject.SetActive(true);
-                    drumCooldownSlider.gameObject.SetActive(true);
+                    //drumCooldownSlider.gameObject.SetActive(true);
                     drumDurationSlider.gameObject.SetActive(true);
                     drumUnlock = true;
                 }
@@ -211,13 +214,18 @@ public class HUDManager : MonoBehaviour
     {
         currentDrumCooldown = Mathf.Clamp(currentDrumCooldown, 0.0f, drumCooldown);
         currentShieldDuration = Mathf.Clamp(currentShieldDuration, 0.0f, shieldDuration);
-
+        
         if (currentDrumCooldown != 0)
         {
             currentDrumCooldown -= Time.deltaTime;
             currentDrumCooldown = Mathf.Clamp(currentDrumCooldown, 0.0f, drumCooldown);
 
-            if (currentDrumCooldown != 0)
+            if(playerBody.ShieldAvailable)
+            {
+                drumCooldownSlider.value = 1.0f;
+                drumCooldownText.text = "";
+            }
+            else if (currentDrumCooldown != 0)
             {
                 drumCooldownSlider.value = 1.0f - (currentDrumCooldown / drumCooldown);
                 drumCooldownText.text = currentDrumCooldown.ToString("0.0");
@@ -234,7 +242,7 @@ public class HUDManager : MonoBehaviour
             drumCooldownText.text = "";
         }
 
-        if (currentShieldDuration != 0)
+        if (currentShieldDuration != 0 && !playerBody.ShieldAvailable)
         {
             durationSliderFill.gameObject.SetActive(true);
 

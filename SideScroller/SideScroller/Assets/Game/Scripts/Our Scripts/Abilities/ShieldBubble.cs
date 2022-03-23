@@ -11,9 +11,9 @@ public class ShieldBubble : MonoBehaviour
         get { return lifeTime; }
     }
 
-    void Start()
+    void OnEnable()
     {
-        Destroy(gameObject, lifeTime);
+        StartCoroutine(UptimeCountdown());
     }
 
     private void OnTriggerEnter(Collider other)
@@ -21,10 +21,26 @@ public class ShieldBubble : MonoBehaviour
         if (other.CompareTag("Shieldable"))
         {
             other.gameObject.SetActive(false);
+            StartCoroutine(PopShield());
         }
         else if (other.CompareTag("Spikes"))
         {
             other.gameObject.GetComponent<Spikes>().SetSpikeDmg();
+            StartCoroutine(PopShield());
         }
+    }
+
+    private IEnumerator UptimeCountdown()
+    {
+        yield return new WaitForSeconds(lifeTime);
+        gameObject.SetActive(false);
+        StopAllCoroutines();
+    }
+
+    private IEnumerator PopShield()
+    {
+        yield return new WaitForSeconds(0.05f);
+        gameObject.SetActive(false);
+        StopAllCoroutines();
     }
 }

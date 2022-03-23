@@ -12,12 +12,12 @@ public class PlayerBody : MonoBehaviour
     }
 
     [SerializeField]
-    private Transform CharacterBody;
+    private Transform characterBody;
 
     [SerializeField]
-    private GameObject shieldBubble;
-    [SerializeField]
     private GameObject fireLocation;
+    [SerializeField]
+    private Transform shieldLocation;
 
     [SerializeField]
     private float guitarCooldown = 0.5f;
@@ -36,6 +36,10 @@ public class PlayerBody : MonoBehaviour
 
     private bool guitarAvailable;
     private bool shieldAvailable;
+    public bool ShieldAvailable
+    {
+        get { return shieldAvailable; }
+    }
     private bool beamAvailable;
     private GameObject fluteBeam;
 
@@ -69,7 +73,7 @@ public class PlayerBody : MonoBehaviour
     
     public void Shield()
     {
-        if (shieldAvailable && shieldBubble && fireLocation)
+        if (shieldAvailable && fireLocation)
         {
             StartCoroutine(DrumShield());
         }
@@ -123,7 +127,7 @@ public class PlayerBody : MonoBehaviour
     private IEnumerator DrumShield()
     {
         shieldAvailable = false;
-        GameObject shieldGO = GameObject.Instantiate(shieldBubble, CharacterBody.transform);
+        GameObject shieldGO = ObjectPoolManager.Instance.GetPooledObject(ObjectPoolManager.PoolTypes.SHIELD);
         shieldGO.SetActive(true);
 
         if(HUDManager.Instance.DrumCooldown == 0.0f)
@@ -135,8 +139,12 @@ public class PlayerBody : MonoBehaviour
         HUDManager.Instance.CurrentDrumCooldown = HUDManager.Instance.DrumCooldown;
         HUDManager.Instance.CurrentShieldDuration = HUDManager.Instance.ShieldDuration;
         
-
-        yield return new WaitForSeconds(shieldCooldown + shieldGO.GetComponent<ShieldBubble>().LifeTime);
+        while(shieldGO.activeSelf)
+        {
+            shieldGO.transform.position = shieldLocation.position;
+            yield return null;
+        }
+        
         shieldAvailable = true;
     }
 
