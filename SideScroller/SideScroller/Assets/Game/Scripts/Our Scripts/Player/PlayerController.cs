@@ -13,6 +13,12 @@ public class PlayerController : MonoBehaviour
 
     private bool gcd = false;
 
+    private bool paused;
+    public bool Paused
+    {
+        set { paused = value; }
+    }
+
     private void Start()
     {
         world = WorldStatus.Instance;
@@ -20,8 +26,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        UpdateAim();
-        CheckForFire();
+        if(!paused)
+        {
+            UpdateAim();
+            CheckForFire();
+        }
     }
 
     private void CheckForFire()
