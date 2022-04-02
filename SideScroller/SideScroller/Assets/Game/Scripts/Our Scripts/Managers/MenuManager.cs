@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    private MenuManager instance;
-    public MenuManager Instance
+    private static MenuManager instance;
+    public static MenuManager Instance
     {
         get { return instance; }
     }
@@ -21,7 +21,10 @@ public class MenuManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
 
     private void Start()
