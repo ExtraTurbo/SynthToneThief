@@ -10,7 +10,6 @@ public class MenuManager : MonoBehaviour
         get { return instance; }
     }
 
-
     [SerializeField]
     private GameObject pauseMenuGO;
     [SerializeField]
@@ -18,6 +17,10 @@ public class MenuManager : MonoBehaviour
 
     private bool isPaused;
     private bool canPause;
+
+    private bool guitarLocked;
+    private bool drumsLocked;
+    private bool fluteLocked;
 
     private void Awake()
     {
@@ -31,12 +34,33 @@ public class MenuManager : MonoBehaviour
     {
         isPaused = false;
         canPause = true;
+
+        guitarLocked = true;
+        drumsLocked = true;
+        fluteLocked = true;
+
         pauseMenuGO.SetActive(false);
     }
 
     private void Update()
     {
         bool pause = Input.GetButtonDown("Cancel");
+
+        if (guitarLocked && WorldStatus.Instance.Phase >= 1)
+        {
+            guitarLocked = false;
+            PauseMenuManager.Instance.UnlockGuitarControls();
+        }
+        if (drumsLocked && WorldStatus.Instance.Phase >= 2)
+        {
+            drumsLocked = false;
+            PauseMenuManager.Instance.UnlockDrumsControls();
+        }
+        if (fluteLocked && WorldStatus.Instance.Phase >= 3)
+        {
+            fluteLocked = false;
+            PauseMenuManager.Instance.UnlockFluteControls();
+        }
 
         // if player pressed ESC & not already paused & they can pause
         if(pause && !isPaused && canPause)
@@ -57,7 +81,7 @@ public class MenuManager : MonoBehaviour
         pauseMenuGO.SetActive(true);
     }
 
-    private void UnpauseGame()
+    public void UnpauseGame()
     {
         Time.timeScale = 1.0f;
         isPaused = false;
