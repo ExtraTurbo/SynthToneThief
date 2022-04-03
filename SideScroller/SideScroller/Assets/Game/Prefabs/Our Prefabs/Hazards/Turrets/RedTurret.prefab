@@ -385,6 +385,7 @@ MonoBehaviour:
   fireRate: 2
   projectileSpeed: 10
   projectileLifeTime: 2
+  playerDistanceStartShooting: 65
   turretSource: {fileID: 0}
 --- !u!82 &2255099546892354807
 AudioSource:
@@ -407,7 +408,7 @@ AudioSource:
   Priority: 191
   DopplerLevel: 0.66
   MinDistance: 1.75
-  MaxDistance: 9.08
+  MaxDistance: 60
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
