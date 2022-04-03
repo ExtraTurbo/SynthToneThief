@@ -8,6 +8,8 @@ public class GuitarProjectile : MonoBehaviour
     private float speed = 5.0f;
     [SerializeField]
     private float lifeTime = 5.0f;
+    [SerializeField]
+    private GameObject meshes;
 
     private Vector3 direction;
 
@@ -47,6 +49,17 @@ public class GuitarProjectile : MonoBehaviour
     public void Fire(Vector3 dir)
     {
         direction = dir;
+    }
+
+    public void SetMeshRotation()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 0.0f;
+        Vector3 objPos = Camera.main.WorldToScreenPoint(meshes.transform.position);
+        mousePos.x = mousePos.x - objPos.x;
+        mousePos.y = mousePos.y - objPos.y;
+        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        meshes.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, angle - 10.0f));
     }
 
     private IEnumerator DisableTimer()

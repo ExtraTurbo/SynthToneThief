@@ -111,6 +111,7 @@ public class PlayerBody : MonoBehaviour
         if (bulletGO != null)
         {
             bulletGO.transform.position = fireLocation.transform.position;
+            bulletGO.GetComponent<GuitarProjectile>().SetMeshRotation();
 
             bulletGO.SetActive(true); // set bullet as active
 

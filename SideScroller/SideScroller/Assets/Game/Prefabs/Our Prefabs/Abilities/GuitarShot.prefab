@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5022641248649926129}
   m_Layer: 0
   m_Name: Meshes
-  m_TagString: Untagged
+  m_TagString: GuitarProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2981749494358042850}
-  m_LocalRotation: {x: 0, y: 0, z: -0.078459024, w: 0.99691737}
+  m_LocalRotation: {x: 0, y: 0, z: -0.08715578, w: 0.9961947}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
@@ -35,7 +35,7 @@ Transform:
   - {fileID: 9200734268806426870}
   m_Father: {fileID: 4179250433271823750}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10}
 --- !u!1 &3138643767077097302
 GameObject:
   m_ObjectHideFlags: 0
@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 7834480671391263536}
   m_Layer: 0
   m_Name: Box003
-  m_TagString: Untagged
+  m_TagString: GuitarProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,10 +126,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3138643767077097302}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 690106047850165013, guid: e768402e413a6f3429587dd94a8e2691, type: 3}
 --- !u!1 &3212820482659303119
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 612101860923826126}
   m_Layer: 0
   m_Name: Box002
-  m_TagString: Untagged
+  m_TagString: GuitarProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -222,10 +222,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3212820482659303119}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2232952877369940510, guid: e768402e413a6f3429587dd94a8e2691, type: 3}
 --- !u!1 &3653684340755277628
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 1890678486034008301}
   m_Layer: 0
   m_Name: GuitarShot
-  m_TagString: Untagged
+  m_TagString: GuitarProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -277,6 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   lifeTime: 1
+  meshes: {fileID: 2981749494358042850}
 --- !u!54 &2149055217610879954
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -302,7 +303,7 @@ BoxCollider:
   m_GameObject: {fileID: 3653684340755277628}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.62456644, y: 0.5852226, z: 0.30477595}
   m_Center: {x: 0.16484857, y: 0.7378997, z: -0.45819497}
@@ -315,7 +316,7 @@ BoxCollider:
   m_GameObject: {fileID: 3653684340755277628}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.231373, y: 0.31266713, z: 0.313318}
   m_Center: {x: -0.1645619, y: 0.73063207, z: -0.45875877}
@@ -333,7 +334,7 @@ GameObject:
   - component: {fileID: 870641185435140103}
   m_Layer: 0
   m_Name: Box006
-  m_TagString: Untagged
+  m_TagString: GuitarProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,10 +410,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3817783096596191933}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3822247309040838107, guid: e768402e413a6f3429587dd94a8e2691, type: 3}
 --- !u!1 &4525855485414016868
@@ -429,7 +430,7 @@ GameObject:
   - component: {fileID: 63199056139104648}
   m_Layer: 0
   m_Name: Box004
-  m_TagString: Untagged
+  m_TagString: GuitarProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -505,10 +506,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4525855485414016868}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5613867604693661769, guid: e768402e413a6f3429587dd94a8e2691, type: 3}
 --- !u!1 &6126854083878283745
@@ -525,7 +526,7 @@ GameObject:
   - component: {fileID: 5285000818490950899}
   m_Layer: 0
   m_Name: Box001
-  m_TagString: Untagged
+  m_TagString: GuitarProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -601,10 +602,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6126854083878283745}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5060444177187149915, guid: e768402e413a6f3429587dd94a8e2691, type: 3}
 --- !u!1 &6561983312010309535
@@ -621,7 +622,7 @@ GameObject:
   - component: {fileID: 3139933599312746275}
   m_Layer: 0
   m_Name: Box005
-  m_TagString: Untagged
+  m_TagString: GuitarProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -697,9 +698,9 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6561983312010309535}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6715375062900545627, guid: e768402e413a6f3429587dd94a8e2691, type: 3}

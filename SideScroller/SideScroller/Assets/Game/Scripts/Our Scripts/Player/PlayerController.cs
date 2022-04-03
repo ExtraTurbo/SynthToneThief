@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private static PlayerController instance;
+    public static PlayerController Instance
+    {
+        get { return instance; }
+    }
+
     private WorldStatus world;
 
     [SerializeField]
@@ -17,6 +23,14 @@ public class PlayerController : MonoBehaviour
     public bool Paused
     {
         set { paused = value; }
+    }
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
 
     private void Start()
