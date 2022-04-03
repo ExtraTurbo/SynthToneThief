@@ -19,17 +19,28 @@ public class Turret : MonoBehaviour
 
     private ObjectPoolManager.PoolTypes poolType;
 
+    // Audio
+    public AudioSource turretSource;
+
     private void Start()
     {
+        // Audio
+        turretSource = GetComponent<AudioSource>();
+        if (turretSource == null)
+        {
+            // only disabling this for the time being for testing
+            //Debug.LogError("No AudioSource found");
+        }
+
         shootDirection = fireLocation.position - transform.position;
         shootDirection.z = 0.0f;
         shootDirection.Normalize();
 
-        if(gameObject.CompareTag("RedTurret"))
+        if (gameObject.CompareTag("RedTurret"))
         {
             poolType = ObjectPoolManager.PoolTypes.REDTURRET;
         }
-        else if(gameObject.CompareTag("BlueTurret"))
+        else if (gameObject.CompareTag("BlueTurret"))
         {
             poolType = ObjectPoolManager.PoolTypes.BLUETURRET;
         }
@@ -46,18 +57,19 @@ public class Turret : MonoBehaviour
         yield return new WaitForSeconds(fireRate);
 
         GameObject projectileGO = ObjectPoolManager.Instance.GetPooledObject(poolType);
-        
-        if(projectileGO != null)
+
+        if (projectileGO != null)
         {
             HazardProjectile hazardProjectile = projectileGO.GetComponent<HazardProjectile>();
-
             hazardProjectile.transform.position = fireLocation.position;
-
             hazardProjectile.LifeTime = projectileLifeTime;
             hazardProjectile.Speed = projectileSpeed;
 
             projectileGO.SetActive(true);
             hazardProjectile.Fire(shootDirection);
+
+            // Audio
+            PlayShootingSound();
         }
         else
         {
@@ -65,5 +77,11 @@ public class Turret : MonoBehaviour
         }
 
         StartCoroutine(ShootProjectile());
+    }
+
+    void PlayShootingSound()
+    {
+        turretSource.volume = 0.2f;
+        turretSource.PlayOneShot(turretSource.clip);
     }
 }
