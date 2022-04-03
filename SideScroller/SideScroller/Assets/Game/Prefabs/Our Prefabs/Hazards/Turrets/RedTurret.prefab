@@ -385,7 +385,8 @@ MonoBehaviour:
   fireRate: 2
   projectileSpeed: 10
   projectileLifeTime: 2
-  playerDistanceStartShooting: 65
+  playerDistanceStartShootingX: 65
+  playerDistanceStartShootingY: 65
   turretSource: {fileID: 0}
 --- !u!82 &2255099546892354807
 AudioSource:
