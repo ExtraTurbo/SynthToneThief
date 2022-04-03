@@ -109370,12 +109370,12 @@ PrefabInstance:
     - target: {fileID: 1244776363702404901, guid: ae336466c8e038a42a715c2094affabe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.63
+      value: 6.58
       objectReference: {fileID: 0}
     - target: {fileID: 1244776363702404901, guid: ae336466c8e038a42a715c2094affabe,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1244776363702404901, guid: ae336466c8e038a42a715c2094affabe,
         type: 3}
@@ -109437,6 +109437,12 @@ PrefabInstance:
       propertyPath: jumpForce.y
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 7191501951482298201, guid: ae336466c8e038a42a715c2094affabe,
+        type: 3}
+      propertyPath: pooledObjectPrefab
+      value: 
+      objectReference: {fileID: 1395726581537675476, guid: 4ee0ecad26daee94883c1626d32ea89d,
+        type: 3}
     - target: {fileID: 8519965066681318514, guid: ae336466c8e038a42a715c2094affabe,
         type: 3}
       propertyPath: m_RootOrder
