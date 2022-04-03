@@ -11,6 +11,8 @@ public class PauseMenuManager : MonoBehaviour
         get { return instance; }
     }
 
+    [SerializeField]
+    private GameObject background;
 
     [SerializeField]
     private GameObject pauseScreen;
@@ -49,6 +51,8 @@ public class PauseMenuManager : MonoBehaviour
 
     private void Start()
     {
+        background.SetActive(true);
+
         controlsScreen.SetActive(false);
         pauseScreen.SetActive(true);
 
