@@ -118,7 +118,8 @@ public class Turret : MonoBehaviour
 
     void PlayShootingSound()
     {
-        turretSource.volume = 0.2f;
+        turretSource.volume = 0.3f;
+        turretSource.pitch = Random.Range(0.7f, 1.3f);
         turretSource.PlayOneShot(turretSource.clip);
     }
 }
