@@ -46,22 +46,6 @@ public class MenuManager : MonoBehaviour
     {
         bool pause = Input.GetButtonDown("Cancel");
 
-        if (guitarLocked && WorldStatus.Instance.Phase >= 1)
-        {
-            guitarLocked = false;
-            PauseMenuManager.Instance.UnlockGuitarControls();
-        }
-        if (drumsLocked && WorldStatus.Instance.Phase >= 2)
-        {
-            drumsLocked = false;
-            PauseMenuManager.Instance.UnlockDrumsControls();
-        }
-        if (fluteLocked && WorldStatus.Instance.Phase >= 3)
-        {
-            fluteLocked = false;
-            PauseMenuManager.Instance.UnlockFluteControls();
-        }
-
         // if player pressed ESC & not already paused & they can pause
         if(pause && !isPaused && canPause)
         {
@@ -70,6 +54,25 @@ public class MenuManager : MonoBehaviour
         else if (pause && isPaused)
         {
             UnpauseGame();
+        }
+
+        if (PauseMenuManager.Instance != null)
+        {
+            if (guitarLocked && WorldStatus.Instance.Phase >= 1)
+            {
+                guitarLocked = false;
+                PauseMenuManager.Instance.UnlockGuitarControls();
+            }
+            if (drumsLocked && WorldStatus.Instance.Phase >= 2)
+            {
+                drumsLocked = false;
+                PauseMenuManager.Instance.UnlockDrumsControls();
+            }
+            if (fluteLocked && WorldStatus.Instance.Phase >= 3)
+            {
+                fluteLocked = false;
+                PauseMenuManager.Instance.UnlockFluteControls();
+            }
         }
     }
 
