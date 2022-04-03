@@ -12,7 +12,12 @@ public class HUDManager : MonoBehaviour
     }
 
     [SerializeField]
-    PlayerBody playerBody;
+    private PlayerBody playerBody;
+
+    [SerializeField]
+    private Image greyScreen;
+    [SerializeField]
+    private float fadeOutSpeed = 1.0f;
 
     // GUITAR VALUES //
     [SerializeField]
@@ -126,6 +131,9 @@ public class HUDManager : MonoBehaviour
 
     private void Start()
     {
+        greyScreen.gameObject.SetActive(true);
+        greyScreen.CrossFadeAlpha(1.0f, 0.0f, true);
+
         guitarCooldownText.text = "";
         drumCooldownText.text = "";
         fluteCooldownText.text = "";
@@ -138,6 +146,8 @@ public class HUDManager : MonoBehaviour
         guitarUnlock = false;
         drumUnlock = false;
         fluteUnlock = false;
+
+        StartCoroutine(FadeInGame());
     }
 
     private void Update()
@@ -181,6 +191,14 @@ public class HUDManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    private IEnumerator FadeInGame()
+    {
+        yield return new WaitForSeconds(0.5f);
+        greyScreen.CrossFadeAlpha(0.0f, fadeOutSpeed, false);
+        yield return new WaitForSeconds(fadeOutSpeed);
+        greyScreen.gameObject.SetActive(false);
     }
 
     private void UpdateGuitarTimer()

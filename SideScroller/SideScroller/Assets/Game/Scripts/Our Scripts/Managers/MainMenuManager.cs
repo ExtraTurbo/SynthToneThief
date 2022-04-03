@@ -40,7 +40,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void StartButton()
     {
-        SceneManager.LoadScene("GameLevel");
+        SceneManager.LoadScene("Intro");
     }
 
     public void QuitButton()
