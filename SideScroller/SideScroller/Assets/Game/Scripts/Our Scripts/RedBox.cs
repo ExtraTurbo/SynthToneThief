@@ -5,6 +5,7 @@ using UnityEngine;
 public class RedBox : MonoBehaviour
 {
     private AudioSource audioSource;
+
     private MeshRenderer r;
     private BoxCollider c;
     private GameObject child;
@@ -27,7 +28,6 @@ public class RedBox : MonoBehaviour
 
     public void DestroyBox()
     {
-        Debug.Log("Calling DestroyBox");
         StartCoroutine(Death());
     }
 
@@ -47,13 +47,9 @@ public class RedBox : MonoBehaviour
         }
         if (audioSource != null)
         {
-            audioSource.PlayOneShot(audioSource.clip, 2.0f);
+            //audioSource.PlayOneShot("");
         }
-        else
-        {
-            Debug.LogError("Null Audio Source on RedBox");
-        }    
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
 }
