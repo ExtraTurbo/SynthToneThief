@@ -35,6 +35,6 @@ public class CreditsTrigger : MonoBehaviour
         blackScreen.CrossFadeAlpha(0.0f, 0.0f, true);
         blackScreen.CrossFadeAlpha(1.0f, fadeTime, false);
         yield return new WaitForSeconds(fadeTime + 0.5f);
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Outro");
     }
 }

@@ -6,6 +6,9 @@ public class InstrumentPickups : MonoBehaviour
 {
     private WorldStatus world;
 
+    [SerializeField]
+    private ParticleSystem instrumentEffect;
+
     private void Start()
     {
         world = WorldStatus.Instance;
@@ -26,7 +29,7 @@ public class InstrumentPickups : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             // Destroy the pickup
-            Object.Destroy(this.gameObject);
+            StartCoroutine(Destroy());
         }
     }
 
@@ -44,5 +47,12 @@ public class InstrumentPickups : MonoBehaviour
         {
             world.Phase = 3;
         }
+    }
+
+    private IEnumerator Destroy()
+    {
+        instrumentEffect.Play();
+        yield return new WaitForSeconds(1.0f);
+        Object.Destroy(this.gameObject);
     }
 }
