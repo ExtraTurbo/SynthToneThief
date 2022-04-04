@@ -12,13 +12,13 @@ public class RedBox : MonoBehaviour
 
     private void Awake()
     {
-        TryGetComponent<AudioSource>(out audioSource);
-        TryGetComponent<MeshRenderer>(out r);
-        TryGetComponent<BoxCollider>(out c);
+        gameObject.TryGetComponent<AudioSource>(out audioSource);
+        gameObject.TryGetComponent<MeshRenderer>(out r);
+        gameObject.TryGetComponent<BoxCollider>(out c);
 
         if (transform.childCount > 0)
         {
-            child = transform.GetChild(0).gameObject;
+            child = gameObject.transform.GetChild(0).gameObject;
         }
         else
         {
