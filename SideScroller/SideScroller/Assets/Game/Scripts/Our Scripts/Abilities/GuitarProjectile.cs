@@ -38,7 +38,14 @@ public class GuitarProjectile : MonoBehaviour
             }
             else
             {
-                Destroy(other.gameObject);
+                if (other.TryGetComponent<RedBox>(out RedBox box))
+                {
+                    box.DestroyBox();
+                }
+                else
+                {
+                    Destroy(other.gameObject);
+                }
             }
 
             gameObject.SetActive(false);
