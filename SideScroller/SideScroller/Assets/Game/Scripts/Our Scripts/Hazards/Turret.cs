@@ -20,6 +20,9 @@ public class Turret : MonoBehaviour
     [SerializeField]
     private float playerDistanceStartShootingY = 65.0f;
 
+    [SerializeField]
+    private ParticleSystem fireEffect;
+
     private Vector3 shootDirection;
 
     private ObjectPoolManager.PoolTypes poolType;
@@ -87,6 +90,8 @@ public class Turret : MonoBehaviour
         if (shooting)
         {
             yield return new WaitForSeconds(fireRate);
+
+            fireEffect.Play();
 
             GameObject projectileGO = ObjectPoolManager.Instance.GetPooledObject(poolType);
 
