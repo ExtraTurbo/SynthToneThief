@@ -112183,6 +112183,11 @@ PrefabInstance:
       propertyPath: shieldLocation
       value: 
       objectReference: {fileID: 400988147}
+    - target: {fileID: 1244776363267291759, guid: ae336466c8e038a42a715c2094affabe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.193
+      objectReference: {fileID: 0}
     - target: {fileID: 1244776363702404901, guid: ae336466c8e038a42a715c2094affabe,
         type: 3}
       propertyPath: m_RootOrder

@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2981749494358042850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: -0.5, z: 0.46}
+  m_LocalPosition: {x: 0.11, y: -0.602, z: 0.46}
   m_LocalScale: {x: 1.5, y: 2.5, z: 3}
   m_Children:
   - {fileID: 5085234920013497061}
@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: -7808298059553248960}
   - component: {fileID: 2149055217610879954}
   - component: {fileID: 2063450900167343196}
+  - component: {fileID: 3805115912168742309}
   m_Layer: 0
   m_Name: GuitarShot
   m_TagString: GuitarProjectile
@@ -417,6 +418,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &3805115912168742309
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653684340755277628}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2911377, y: 0.3339383, z: 0.5101677}
+  m_Center: {x: 0.0025769174, y: 0.1001896, z: 0.012687832}
 --- !u!1 &3817783096596191933
 GameObject:
   m_ObjectHideFlags: 0

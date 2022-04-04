@@ -53,6 +53,6 @@ public class InstrumentPickups : MonoBehaviour
     {
         instrumentEffect.Play();
         yield return new WaitForSeconds(1.0f);
-        Object.Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 }
