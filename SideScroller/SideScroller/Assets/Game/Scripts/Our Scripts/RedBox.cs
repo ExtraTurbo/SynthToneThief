@@ -15,7 +15,14 @@ public class RedBox : MonoBehaviour
         TryGetComponent<AudioSource>(out audioSource);
         TryGetComponent<MeshRenderer>(out r);
         TryGetComponent<BoxCollider>(out c);
-        child = transform.GetChild(0).gameObject;
+        if (transform.childCount > 0)
+        {
+            child = transform.GetChild(0).gameObject;
+        }
+        else
+        {
+            child = null;
+        }
     }
 
     public void DestroyBox()
