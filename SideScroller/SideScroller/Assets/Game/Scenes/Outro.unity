@@ -451,12 +451,12 @@ MonoBehaviour:
   screenImage: {fileID: 1068941927}
   screenFadeInSpeed: 0.5
   storyLines:
-  - Test line 1 ergejrhbgjekrbg
-  - this is the outro ~~
-  - wee woo wee woo wee woo
+  - You hear Piano Pete's evil composition fading off into the distance...
+  - It seems the Tone Thief has escaped to another land!
+  - To Be Continued
   textBox: {fileID: 1933133379}
   textFadeSpeed: 0.5
-  textLingerTime: 2
+  textLingerTime: 3
 --- !u!4 &1032430696
 Transform:
   m_ObjectHideFlags: 0
