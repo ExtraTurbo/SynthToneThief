@@ -13,7 +13,6 @@ public class GuitarProjectile : MonoBehaviour
 
     private Vector3 direction;
 
-    // protected so it can be overwritten
     private void OnEnable()
     {
         StartCoroutine(DisableTimer());

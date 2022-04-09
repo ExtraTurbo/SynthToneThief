@@ -34,8 +34,6 @@ public class PlayerBody : MonoBehaviour
     [SerializeField]
     private Material beamMaterial;
 
-    private AudioSource guitarSource = null;
-
     private bool guitarAvailable;
     private bool shieldAvailable;
     public bool ShieldAvailable
@@ -98,7 +96,6 @@ public class PlayerBody : MonoBehaviour
     private IEnumerator GuitarAtk()
     {
         guitarAvailable = false;
-        //guitarSource.PlayOneShot(guitarSource.clip);
 
         Vector3 bulletStartPos = fireLocation.transform.position;
 

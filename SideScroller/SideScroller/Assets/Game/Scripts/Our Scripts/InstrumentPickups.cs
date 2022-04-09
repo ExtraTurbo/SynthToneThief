@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class InstrumentPickups : MonoBehaviour
 {
-    private WorldStatus world;
-
     [SerializeField]
     private ParticleSystem instrumentEffect;
 
+    [SerializeField]
+    private GameObject instrumentModel;
+
+    [SerializeField]
+    private AudioClip pickupSoundClip;
+
+    [SerializeField]
+    private AudioSource playerAudioSource;
+
     private void Start()
     {
-        world = WorldStatus.Instance;
-
-        if(world == null)
-        {
-            Debug.Log("'InstrumentPickup' script is missing 'WorldStatus' script -- assign in Inspector");
-        }
         if (gameObject.tag == null)
         {
             Debug.Log("This instrument pickup (" + gameObject + ") does not have a tag!");
@@ -33,26 +34,40 @@ public class InstrumentPickups : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
-    {
-        if(gameObject.tag == "GuitarPickup")
-        {
-            world.Phase = 1;
-        }
-        else if(gameObject.tag == "DrumPickup")
-        {
-            world.Phase = 2;
-        }
-        else if(gameObject.tag == "FlutePickup")
-        {
-            world.Phase = 3;
-        }
-    }
-
     private IEnumerator Destroy()
     {
         instrumentEffect.Play();
+        gameObject.GetComponent<CapsuleCollider>().enabled = false;
+        instrumentModel.SetActive(false);
+        SetPhase();
         yield return new WaitForSeconds(1.0f);
         Destroy(gameObject);
+    }
+
+    private void SetPhase()
+    {
+        if (gameObject.tag == "GuitarPickup")
+        {
+            WorldStatus.Instance.Phase = 1;
+            PlayPickupSound();
+        }
+        else if (gameObject.tag == "DrumPickup")
+        {
+            WorldStatus.Instance.Phase = 2;
+            PlayPickupSound();
+        }
+        else if (gameObject.tag == "FlutePickup")
+        {
+            WorldStatus.Instance.Phase = 3;
+            PlayPickupSound();
+        }
+    }
+
+    private void PlayPickupSound()
+    {
+        if (pickupSoundClip != null)
+        {
+            playerAudioSource.PlayOneShot(pickupSoundClip, 0.8f);
+        }
     }
 }
