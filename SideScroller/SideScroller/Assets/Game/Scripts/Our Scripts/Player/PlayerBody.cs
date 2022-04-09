@@ -218,40 +218,33 @@ public class PlayerBody : MonoBehaviour
         // send a ray from Liam to the Mouse World Position, check for collisions
         if (Physics.Raycast(startPos, direction, out RaycastHit hitInfo, beamLength))
         {
-            Debug.Log("Hit info: " + hitInfo.transform.name);
+            //Debug.Log("Hit info: " + hitInfo.transform.name);
 
             // if the raycast hit an object tagged "Growable"
-            if(hitInfo.collider.CompareTag("GuitarProjectile") || !hitInfo.collider.CompareTag("Growable"))
+            if(hitInfo.collider.CompareTag("GuitarProjectile") || (!hitInfo.collider.CompareTag("Growable") && !hitInfo.collider.transform.parent.CompareTag("Growable")))
             {
                 // hit something irrelevant
             }
             else if (hitInfo.collider.CompareTag("Growable") || hitInfo.collider.transform.parent.CompareTag("Growable"))
             {
                 // try to get a "Mushroom" component (script) from that object
-                hitInfo.collider.TryGetComponent<Mushroom>(out Mushroom component);
-
-                // if the object had a Mushroom component (script)
-                if (component != null)
+                if (hitInfo.collider.TryGetComponent<Mushroom>(out Mushroom component))
                 {
                     // call the Scale function (grow/shrink the mushroom)
                     component.Scale();
                 }
-                else
+                else if (hitInfo.collider.transform.parent != null)
                 {
-                    if (hitInfo.collider.transform.parent != null)
+                    // try to find a Mushroom component (script) on the object's parent
+                    // (in case we hit the cap/stem colliders instead of the mushroom's collider)
+                    // if the parent has a Mushroom component, call the Scale function
+                    if (hitInfo.collider.gameObject.transform.parent.TryGetComponent<Mushroom>(out Mushroom parent))
                     {
-                        // try to find a Mushroom component (script) on the object's parent
-                        // (in case we hit the cap/stem colliders instead of the mushroom's collider)
-                        hitInfo.collider.transform.parent.TryGetComponent<Mushroom>(out component);
-
-                        // if the parent has a Mushroom component, call the Scale function
-                        if (component != null)
-                        {
-                            component.Scale();
-                        }
+                        parent.Scale();
                     }
                 }
             }
+            
         }
         // start the beam ability's cooldown timer
         StartCoroutine("BeamCooldown");

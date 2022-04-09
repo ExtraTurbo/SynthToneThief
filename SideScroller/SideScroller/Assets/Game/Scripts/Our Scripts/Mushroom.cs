@@ -80,8 +80,8 @@ public class Mushroom : MonoBehaviour
             {
                 playerDistanceX = Mathf.Abs(gameObject.transform.position.x - player.transform.position.x);
                 playerDistanceY = Mathf.Abs(gameObject.transform.position.y - player.transform.position.y);
-                Debug.Log("Player Distance X from Physics Shroom: " + playerDistanceX.ToString());
-                Debug.Log("Player Distance Y from Physics Shroom: " + playerDistanceY.ToString());
+                //Debug.Log("Player Distance X from Physics Shroom: " + playerDistanceX.ToString());
+                //Debug.Log("Player Distance Y from Physics Shroom: " + playerDistanceY.ToString());
                 if (playerDistanceX > playerDistanceToShrinkPhysicsShroom || playerDistanceY > playerDistanceToShrinkPhysicsShroom)
                 {
                     StartCoroutine(Shrink());
@@ -106,7 +106,7 @@ public class Mushroom : MonoBehaviour
         if (mushCapScript.IsPushMushroom && mushCapScript.Pushing != null)
         {
             distanceCapWall = mushCapScript.Pushing.transform.position - capPosStart;
-            Debug.Log("Distance Cap Wall = " + distanceCapWall);
+            //Debug.Log("Distance Cap Wall = " + distanceCapWall);
 
             if(distanceCapWall.x >= 3.0f)
             {
@@ -124,7 +124,7 @@ public class Mushroom : MonoBehaviour
             capScale = Vector3.Lerp(capStart, capStart + new Vector3(0.9f, 0.1f, 0.9f), timeElapsed / growSpeed);
             mushroomCap.transform.localScale = capScale;
 
-            Debug.Log("Euler Rot Z: " + rot.eulerAngles.z.ToString());
+            //Debug.Log("Euler Rot Z: " + rot.eulerAngles.z.ToString());
 
             switch(Mathf.RoundToInt(rot.eulerAngles.z))
             {
@@ -158,7 +158,7 @@ public class Mushroom : MonoBehaviour
                     break;
             }
 
-            gameObject.GetComponent<BoxCollider>().size = Vector3.Lerp(colliderStart, colliderStart + new Vector3(1.0f, 2.3f, 1.0f), timeElapsed / growSpeed);
+            gameObject.GetComponent<BoxCollider>().size = Vector3.Lerp(colliderStart, colliderStart + new Vector3(1.0f, 2.8f, 1.0f), timeElapsed / growSpeed);
 
             if (distanceCapWall != new Vector3() && mushCapScript.Pushing)
             {
@@ -188,7 +188,7 @@ public class Mushroom : MonoBehaviour
         if(mushCapScript.IsPushMushroom && mushCapScript.Pushing != null)
         {
             distanceCapWall = mushCapScript.Pushing.transform.position - capPosStart;
-            Debug.Log("Distance Cap Wall = " + distanceCapWall);
+            //Debug.Log("Distance Cap Wall = " + distanceCapWall);
         }
 
         while (timeElapsed < growSpeed)
@@ -231,7 +231,7 @@ public class Mushroom : MonoBehaviour
                     break;
             }
 
-            gameObject.GetComponent<BoxCollider>().size = Vector3.Lerp(colliderStart, colliderStart - new Vector3(1.0f, 2.3f, 1.0f), timeElapsed / growSpeed);
+            gameObject.GetComponent<BoxCollider>().size = Vector3.Lerp(colliderStart, colliderStart - new Vector3(1.0f, 2.8f, 1.0f), timeElapsed / growSpeed);
 
             timeElapsed += Time.deltaTime;
             yield return null;

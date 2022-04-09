@@ -25,6 +25,7 @@ TagManager:
   - RedTurret
   - BlueTurret
   - YellowTurret
+  - Beam
   layers:
   - Default
   - TransparentFX
