@@ -58,7 +58,7 @@ public class Mushroom : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == gameObject.tag && grown)
+        if(other.tag == gameObject.tag && (grown || growing))
         {
             other.gameObject.SetActive(false);
         }
