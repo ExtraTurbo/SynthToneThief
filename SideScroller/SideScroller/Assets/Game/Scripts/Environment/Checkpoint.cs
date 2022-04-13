@@ -14,8 +14,11 @@ public class Checkpoint : MonoBehaviour
 	private Renderer render;
 	private AudioSource aSource;
 
-	//setup
-	void Awake()
+    [SerializeField]
+    private ParticleSystem effect;
+
+    //setup
+    void Awake()
 	{
 		render = GetComponent<Renderer>();
 		aSource = GetComponent<AudioSource>();
@@ -54,6 +57,7 @@ public class Checkpoint : MonoBehaviour
 				foreach (GameObject checkpoint in checkpoints)
 					checkpoint.GetComponent<Renderer>().material.color = defColor;
 				aSource.Play();
+                effect.Play();
 				render.material.color = activeColor;
 			}
 		}
