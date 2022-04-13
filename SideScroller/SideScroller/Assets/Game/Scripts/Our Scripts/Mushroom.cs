@@ -25,6 +25,13 @@ public class Mushroom : MonoBehaviour
     [SerializeField]
     private float playerDistanceToShrinkPhysicsShroom = 2.5f;
 
+    [SerializeField]
+    private AudioClip growSound;
+    [SerializeField]
+    private AudioClip shrinkSound;
+    [SerializeField]
+    private AudioSource audioSource;
+
     public bool Grown
     {
         get { return grown; }
@@ -85,10 +92,12 @@ public class Mushroom : MonoBehaviour
             if (!grown)
             {
                 StartCoroutine(Grow());
+                PlayAudioClip(growSound);
             }
             else if(shrinkable)
             {
                 StartCoroutine(Shrink());
+                PlayAudioClip(shrinkSound);
             }
             else
             {
@@ -99,6 +108,7 @@ public class Mushroom : MonoBehaviour
                 if (playerDistanceX > playerDistanceToShrinkPhysicsShroom || playerDistanceY > playerDistanceToShrinkPhysicsShroom)
                 {
                     StartCoroutine(Shrink());
+                    PlayAudioClip(shrinkSound);
                 }
             }
         }
@@ -274,5 +284,12 @@ public class Mushroom : MonoBehaviour
 
         grown = false;
         growing = false;
+    }
+
+    private void PlayAudioClip(AudioClip clip)
+    {
+        audioSource.clip = clip;
+        audioSource.pitch = Random.Range(0.8f, 1.2f);
+        audioSource.Play();
     }
 }

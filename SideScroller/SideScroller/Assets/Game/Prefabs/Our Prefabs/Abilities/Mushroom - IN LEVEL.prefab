@@ -177,6 +177,9 @@ MonoBehaviour:
   translateY: 1.5
   growSpeed: 1
   playerDistanceToShrinkPhysicsShroom: 2.5
+  growSound: {fileID: 8300000, guid: c26b80271798f714d9e3ce27013a7143, type: 3}
+  shrinkSound: {fileID: 8300000, guid: 7410c6cd496b6bd4fb9855717b467892, type: 3}
+  audioSource: {fileID: -1633323754128699791}
 --- !u!82 &-1633323754128699791
 AudioSource:
   m_ObjectHideFlags: 0
