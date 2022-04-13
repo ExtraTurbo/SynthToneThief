@@ -136,7 +136,7 @@ Transform:
   m_GameObject: {fileID: 912610230073085505}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.5, z: 1.25}
   m_Children:
   - {fileID: 912610229852744046}
   - {fileID: 912610230313739548}
@@ -172,8 +172,8 @@ MonoBehaviour:
   mushroomCap: {fileID: 912610229852744047}
   mushroomStem: {fileID: 912610230313739549}
   mushroomMesh: {fileID: 1123788314796925814}
-  growthXZ: 20
-  growthY: 30
+  growthXZ: 15
+  growthY: 20
   translateY: 1.5
   growSpeed: 1
   playerDistanceToShrinkPhysicsShroom: 2.5
