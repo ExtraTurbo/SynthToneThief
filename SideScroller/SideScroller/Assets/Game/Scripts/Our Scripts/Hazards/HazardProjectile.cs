@@ -18,8 +18,39 @@ public class HazardProjectile : MonoBehaviour
 
     private Vector3 direction;
 
+    [SerializeField]
+    private AudioClip destructionSound;
+    private AudioSource audioSource;
+
+    private bool destroying = false;
+    private CapsuleCollider collider;
+
+    [SerializeField]
+    private GameObject mesh;
+    [SerializeField]
+    private GameObject effect;
+
+    private void Start()
+    {
+        TryGetComponent<AudioSource>(out audioSource);
+        TryGetComponent<CapsuleCollider>(out collider);
+    }
+
     protected void OnEnable()
     {
+        if (mesh != null)
+        {
+            mesh.SetActive(true);
+        }
+        if (effect != null)
+        {
+            effect.SetActive(true);
+        }
+        if (collider != null)
+        {
+            collider.enabled = true;
+        }
+        
         StartCoroutine(DisableTimer());
     }
 
@@ -37,7 +68,14 @@ public class HazardProjectile : MonoBehaviour
         {
             if(!other.CompareTag("Growable"))
             {
-                gameObject.SetActive(false);
+                if(other.TryGetComponent<GuitarProjectile>(out GuitarProjectile projectile))
+                {
+                    DestroyProjectile(true);
+                }
+                else
+                {
+                    DestroyProjectile(false);
+                }
             }
         }
     }
@@ -46,10 +84,43 @@ public class HazardProjectile : MonoBehaviour
     {
         direction = dir;
     }
+
+    public void DestroyProjectile(bool wasDestroyed)
+    {
+        if(wasDestroyed)
+        {
+            StartCoroutine(PlayDestructionSound());
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+    }
     
     private IEnumerator DisableTimer()
     {
         yield return new WaitForSeconds(lifeTime);
-        gameObject.SetActive(false);
+        DestroyProjectile(false);
+    }
+
+    private IEnumerator PlayDestructionSound()
+    {
+        if (!destroying && gameObject.activeSelf)
+        {
+            destroying = true;
+            mesh.SetActive(false);
+            effect.SetActive(false);
+            collider.enabled = false;
+
+            if (audioSource != null && destructionSound != null)
+            {
+                audioSource.PlayOneShot(destructionSound, 0.6f);
+            }
+            yield return new WaitForSeconds(0.3f);
+
+            gameObject.SetActive(false);
+            destroying = false;
+        }
+        yield return null;
     }
 }

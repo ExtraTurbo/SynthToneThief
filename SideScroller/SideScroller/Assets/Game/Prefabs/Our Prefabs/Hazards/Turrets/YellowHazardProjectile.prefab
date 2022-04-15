@@ -99,10 +99,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.47167665
-  m_Height: 1
+  m_Radius: 0.52853775
+  m_Height: 1.0570755
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: -0.013699371}
+  m_Center: {x: -0.009316763, y: -0.107084915, z: -0.013699373}
 --- !u!54 &2041221294625205791
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -131,6 +131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff246319a9f5e447b662d086d3c9976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destructionSound: {fileID: 8300000, guid: 26a45951be4300d47b4cd115393be93a, type: 3}
+  mesh: {fileID: 1279657363238251736}
+  effect: {fileID: 5685731151870221235}
 --- !u!114 &7017972990139156584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,11 +153,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2279517374874981522}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -163,8 +166,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 150
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -199,7 +202,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -363,6 +366,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 68e2338fcc0aa3e49b7d08388e78ca76, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60818db8cecd0364aae648b506c6bd90, type: 3}
+--- !u!1 &1279657363238251736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 60818db8cecd0364aae648b506c6bd90,
+    type: 3}
+  m_PrefabInstance: {fileID: 2090558934989033865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1912219199665026658 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 60818db8cecd0364aae648b506c6bd90,
@@ -438,6 +447,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 312be0f44c582fc45b8170677c6a01ea, type: 3}
+--- !u!1 &5685731151870221235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 406744022454536631, guid: 312be0f44c582fc45b8170677c6a01ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 5423123208359531012}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3727400311194361362 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8716909521950854166, guid: 312be0f44c582fc45b8170677c6a01ea,

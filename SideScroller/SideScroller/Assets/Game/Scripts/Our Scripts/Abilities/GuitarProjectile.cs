@@ -33,7 +33,7 @@ public class GuitarProjectile : MonoBehaviour
         {
             if(other.TryGetComponent<HazardProjectile>(out HazardProjectile projectile))
             {
-                other.gameObject.SetActive(false);
+                projectile.DestroyProjectile(true);
             }
             else
             {
