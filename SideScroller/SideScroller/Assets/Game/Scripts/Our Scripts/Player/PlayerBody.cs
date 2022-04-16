@@ -15,7 +15,9 @@ public class PlayerBody : MonoBehaviour
     private Transform characterBody;
 
     [SerializeField]
-    private GameObject fireLocation;
+    private Transform fireLocation;
+    [SerializeField]
+    private Transform fireLocation2;
     [SerializeField]
     private Transform shieldLocation;
 
@@ -97,21 +99,25 @@ public class PlayerBody : MonoBehaviour
     {
         guitarAvailable = false;
 
-        Vector3 bulletStartPos = fireLocation.transform.position;
-
-        // get direction player is facing
-        Vector3 bulletDirection = bulletStartPos - bodyPos.position;
-
-        bulletDirection.z = 0.0f; // no movement in the z-axis
-        bulletDirection.Normalize(); // normalize the direction of the bullet
-
         // instantiate a new projectile
         GameObject bulletGO = ObjectPoolManager.Instance.GetPooledObject(ObjectPoolManager.PoolTypes.GUITARPROJECTILE);
+        bulletGO.transform.position = bodyPos.position;
 
         if (bulletGO != null)
         {
-            bulletGO.transform.position = fireLocation.transform.position;
-            bulletGO.GetComponent<GuitarProjectile>().SetMeshRotation();
+            float angle = bulletGO.GetComponent<GuitarProjectile>().SetMeshRotation();
+            if (angle <= 90.0f && angle >= -90.0f)
+            {
+                bulletGO.transform.position = fireLocation.position;
+            }
+            else
+            {
+                Debug.Log("Setting to firelocation2");
+                bulletGO.transform.position = fireLocation2.position;
+            }
+            
+            Vector3 bulletDirection = new Vector3(1.0f, fireLocation.position.y - bodyPos.position.y, 0.0f);
+            bulletDirection.Normalize(); // normalize the direction of the bullet
 
             bulletGO.SetActive(true); // set bullet as active
 

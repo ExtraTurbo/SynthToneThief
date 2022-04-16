@@ -57,15 +57,16 @@ public class GuitarProjectile : MonoBehaviour
         direction = dir;
     }
 
-    public void SetMeshRotation()
+    public float SetMeshRotation()
     {
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 0.0f;
-        Vector3 objPos = Camera.main.WorldToScreenPoint(meshes.transform.position);
-        mousePos.x = mousePos.x - objPos.x;
-        mousePos.y = mousePos.y - objPos.y;
+        Vector3 objPos = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+        mousePos.x -= objPos.x;
+        mousePos.y -= objPos.y;
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
-        meshes.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, angle - 10.0f));
+        gameObject.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, angle));
+        return angle;
     }
 
     private IEnumerator DisableTimer()
