@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1735378180550673006}
   - component: {fileID: 3439227117838061003}
   - component: {fileID: 603026733203994881}
-  - component: {fileID: 3711424471645645690}
   - component: {fileID: 3055641729438548486}
+  - component: {fileID: 3711424471645645690}
   - component: {fileID: 5680686739993543564}
   m_Layer: 0
   m_Name: Shield
@@ -84,19 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3711424471645645690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395726581537675476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d47fe8a7c5783e4abde36968c0deb8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeTime: 3
 --- !u!136 &3055641729438548486
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -111,6 +98,21 @@ CapsuleCollider:
   m_Height: 0.3415577
   m_Direction: 1
   m_Center: {x: 0.0022481, y: -0.005877177, z: 0}
+--- !u!114 &3711424471645645690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395726581537675476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d47fe8a7c5783e4abde36968c0deb8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 3
+  shieldOnClip: {fileID: 8300000, guid: ca62757839cee944d9de260b8f8ed909, type: 3}
+  shieldOffClip: {fileID: 8300000, guid: 49f6d5c897ad2d14381328f961c8e6e7, type: 3}
 --- !u!82 &5680686739993543564
 AudioSource:
   m_ObjectHideFlags: 0
