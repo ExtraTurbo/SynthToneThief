@@ -17,15 +17,12 @@ public class Hazard : MonoBehaviour
 	private DealDamage dealDamage;
 	private AudioSource aSource;
 
-	private GameObject player;
-
 	//setup
 	void Awake()
 	{
 		aSource = GetComponent<AudioSource>();
 		aSource.playOnAwake = false;
 		dealDamage = GetComponent<DealDamage>();
-		player = GameObject.FindGameObjectWithTag("Player");
 	}
 	
 	//if were checking for a physical collision, attack what hits this object
