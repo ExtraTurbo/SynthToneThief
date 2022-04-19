@@ -21,7 +21,6 @@ public class ShieldBubble : MonoBehaviour
 
     private AudioSource audioSource;
 
-    private CapsuleCollider c;
     private MeshRenderer mesh;
 
     private GameObject player;
@@ -32,7 +31,6 @@ public class ShieldBubble : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         TryGetComponent<AudioSource>(out audioSource);
-        TryGetComponent<CapsuleCollider>(out c);
         TryGetComponent<MeshRenderer>(out mesh);
     }
 
@@ -41,10 +39,6 @@ public class ShieldBubble : MonoBehaviour
         if (mesh != null)
         {
             mesh.enabled = true;
-        }
-        if (c != null)
-        {
-            c.enabled = true;
         }
         
         StartCoroutine(UptimeCountdown());
@@ -61,6 +55,7 @@ public class ShieldBubble : MonoBehaviour
         {
             other.gameObject.GetComponent<Spikes>().SetSpikeDmg();
             DestroyShield();
+
             if (Mathf.Abs(player.transform.position.x - other.gameObject.transform.position.x) > 1.0f)
             {
                 if (player.TryGetComponent<Rigidbody>(out Rigidbody rb))
@@ -99,7 +94,6 @@ public class ShieldBubble : MonoBehaviour
             if (audioSource != null && shieldOffClip != null)
             {
                 mesh.enabled = false;
-                c.enabled = false;
                 audioSource.PlayOneShot(shieldOffClip, 0.8f);
                 yield return new WaitForSeconds(0.3f);
             }

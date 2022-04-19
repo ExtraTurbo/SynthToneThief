@@ -95,9 +95,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.1353726
-  m_Height: 0.33072436
+  m_Height: 0.3307446
   m_Direction: 1
-  m_Center: {x: -0.0012231725, y: -0.00034287572, z: 0}
+  m_Center: {x: -0.0012231725, y: -0.0003527403, z: 0}
 --- !u!114 &3711424471645645690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
   lifeTime: 3
   shieldOnClip: {fileID: 8300000, guid: ca62757839cee944d9de260b8f8ed909, type: 3}
   shieldOffClip: {fileID: 8300000, guid: 49f6d5c897ad2d14381328f961c8e6e7, type: 3}
+  horizontalPushForce: 30
 --- !u!82 &5680686739993543564
 AudioSource:
   m_ObjectHideFlags: 0

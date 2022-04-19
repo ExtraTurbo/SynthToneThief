@@ -22,7 +22,7 @@ public class Spikes : MonoBehaviour
     private IEnumerator SpikeDmg()
     {
         hazardScript.damage = 0;
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.2f);
         hazardScript.damage = damage;
     }
 }
