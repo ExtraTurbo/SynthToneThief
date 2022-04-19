@@ -16,15 +16,21 @@ public class ShieldBubble : MonoBehaviour
     [SerializeField]
     private AudioClip shieldOffClip;
 
+    [SerializeField]
+    private float horizontalPushForce = 30.0f;
+
     private AudioSource audioSource;
 
     private CapsuleCollider c;
     private MeshRenderer mesh;
 
+    private GameObject player;
+
     private bool destroying = false;
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         TryGetComponent<AudioSource>(out audioSource);
         TryGetComponent<CapsuleCollider>(out c);
         TryGetComponent<MeshRenderer>(out mesh);
@@ -55,6 +61,14 @@ public class ShieldBubble : MonoBehaviour
         {
             other.gameObject.GetComponent<Spikes>().SetSpikeDmg();
             DestroyShield();
+            if (Mathf.Abs(player.transform.position.x - other.gameObject.transform.position.x) > 1.0f)
+            {
+                if (player.TryGetComponent<Rigidbody>(out Rigidbody rb))
+                {
+                    float xDir = player.transform.position.x - other.gameObject.transform.position.x;
+                    rb.AddForce(new Vector3(xDir, 0.0f, 0.0f).normalized * horizontalPushForce, ForceMode.VelocityChange);
+                }
+            }
         }
     }
 
