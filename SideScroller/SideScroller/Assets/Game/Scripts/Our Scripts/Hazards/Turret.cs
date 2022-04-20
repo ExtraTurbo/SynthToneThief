@@ -23,6 +23,12 @@ public class Turret : MonoBehaviour
     [SerializeField]
     private ParticleSystem fireEffect;
 
+    [SerializeField]
+    private bool destroyable = false;
+
+    [SerializeField]
+    private ParticleSystem undestroyableEffect;
+
     private Vector3 shootDirection;
 
     private ObjectPoolManager.PoolTypes poolType;
@@ -32,6 +38,7 @@ public class Turret : MonoBehaviour
 
     // Audio
     public AudioSource turretSource = null;
+
 
     private void Start()
     {
@@ -64,6 +71,12 @@ public class Turret : MonoBehaviour
         else
         {
             poolType = ObjectPoolManager.PoolTypes.YELLOWTURRET;
+        }
+
+        //See if the turret is not destroyable
+        if(destroyable == false && gameObject.CompareTag("RedTurret"))
+        {
+            undestroyableEffect.Play();
         }
 
         shooting = false;
@@ -126,5 +139,14 @@ public class Turret : MonoBehaviour
         turretSource.volume = 0.3f;
         turretSource.pitch = Random.Range(0.7f, 1.3f);
         turretSource.PlayOneShot(turretSource.clip);
+    }
+
+    //Code to allow Guitar projectiles to destroy the turret
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("GuitarProjectile") && destroyable == true && gameObject.CompareTag("RedTurret"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

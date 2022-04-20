@@ -17,10 +17,13 @@ public class Checkpoint : MonoBehaviour
     [SerializeField]
     private ParticleSystem effect;
 
+    [SerializeField]
+    private GameObject platform;
+
     //setup
     void Awake()
 	{
-		render = GetComponent<Renderer>();
+		render = platform.GetComponent<Renderer>();
 		aSource = GetComponent<AudioSource>();
 		if(tag != "Respawn")
 		{
@@ -55,7 +58,7 @@ public class Checkpoint : MonoBehaviour
 			if(render.material.color != activeColor)
 			{
 				foreach (GameObject checkpoint in checkpoints)
-					checkpoint.GetComponent<Renderer>().material.color = defColor;
+                    platform.GetComponent<Renderer>().material.color = defColor;
 				aSource.Play();
                 effect.Play();
 				render.material.color = activeColor;
