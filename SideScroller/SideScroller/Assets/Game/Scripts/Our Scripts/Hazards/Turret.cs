@@ -27,7 +27,7 @@ public class Turret : MonoBehaviour
     private bool destroyable = false;
 
     [SerializeField]
-    private ParticleSystem undestroyableEffect;
+    private GameObject undestroyableEffect;
 
     private Vector3 shootDirection;
 
@@ -76,7 +76,7 @@ public class Turret : MonoBehaviour
         //See if the turret is not destroyable
         if(destroyable == false && gameObject.CompareTag("RedTurret"))
         {
-            undestroyableEffect.Play();
+            undestroyableEffect.SetActive(true);
         }
 
         shooting = false;
