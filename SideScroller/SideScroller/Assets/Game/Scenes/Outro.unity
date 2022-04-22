@@ -451,8 +451,9 @@ MonoBehaviour:
   screenImage: {fileID: 1068941927}
   screenFadeInSpeed: 0.5
   storyLines:
-  - You hear Piano Pete's evil composition fading off into the distance...
-  - It seems the Tone Thief has escaped to another land!
+  - You encounter Piano Pete and his evil composition deep within the Fortress of
+    Darkness...
+  - You wield the Primary Instruments of Legend against Piano Pete's dark magic!
   - To Be Continued
   textBox: {fileID: 1933133379}
   textFadeSpeed: 0.5
