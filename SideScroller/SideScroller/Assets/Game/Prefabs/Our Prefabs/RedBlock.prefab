@@ -10,14 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 5299895955945943391}
   - component: {fileID: 5299895955945943389}
-  - component: {fileID: 5299895955945943388}
+  - component: {fileID: 795742762135154440}
   m_Layer: 0
-  m_Name: Collider
+  m_Name: anti spam collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5299895955945943391
 Transform:
   m_ObjectHideFlags: 0
@@ -43,9 +43,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.53735286, y: 0.5936156, z: 1.9057268}
-  m_Center: {x: 0.0075287246, y: -0.0188497, z: 0.53287446}
---- !u!65 &5299895955945943388
+  m_Size: {x: 0.53735286, y: 0.81361187, z: 0.19787148}
+  m_Center: {x: 0.0075287246, y: -0.091518015, z: 0.45819288}
+--- !u!65 &795742762135154440
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,10 +54,10 @@ BoxCollider:
   m_GameObject: {fileID: 5299895955945943390}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.5459345, y: 0.965393, z: 0.25506046}
-  m_Center: {x: -0.00036563454, y: -0.19813773, z: 1.0258471}
+  m_Size: {x: 0.52238446, y: 0.5457326, z: 0.17273779}
+  m_Center: {x: -0.000098826, y: 0.018785836, z: 0.41363025}
 --- !u!1 &5299895956037534826
 GameObject:
   m_ObjectHideFlags: 0
