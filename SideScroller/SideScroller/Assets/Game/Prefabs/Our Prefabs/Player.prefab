@@ -57,7 +57,7 @@ MonoBehaviour:
   beamLifetime: 0.15
   beamMaxLengthX: 8
   beamMaxLengthY: 4
-  beamMaterial: {fileID: 0}
+  beamMaterial: {fileID: 2100000, guid: 0ce3e194f694fdd4f8f6db5a33b4705e, type: 2}
   fluteSound: {fileID: 8300000, guid: 7b16affcaadd6b0448ce603a04d157bf, type: 3}
   fluteSource: {fileID: 7854827822469760251}
 --- !u!82 &7854827822469760251
