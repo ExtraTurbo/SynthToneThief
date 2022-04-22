@@ -36,6 +36,11 @@ public class PlayerBody : MonoBehaviour
     [SerializeField]
     private Material beamMaterial;
 
+    [SerializeField]
+    private AudioClip fluteSound;
+    [SerializeField]
+    private AudioSource fluteSource;
+
     private bool guitarAvailable;
     private bool shieldAvailable;
     public bool ShieldAvailable
@@ -214,6 +219,12 @@ public class PlayerBody : MonoBehaviour
         beam.positionCount = 2;
         beam.SetPosition(0, startPos);
         beam.SetPosition(1, mouseWorldPos);
+
+        if (fluteSource != null && fluteSound != null)
+        {
+            fluteSource.pitch = Random.Range(0.7f, 1.1f);
+            fluteSource.PlayOneShot(fluteSound, 0.8f);
+        }
 
         // length of the beam, used as max distance the raycast should travel
         float beamLength = Mathf.Sqrt(Mathf.Pow(mouseWorldPos.x - startPos.x, 2) + Mathf.Pow(mouseWorldPos.y - startPos.y, 2));
