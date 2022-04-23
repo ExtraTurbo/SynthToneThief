@@ -85,9 +85,9 @@ public class HazardProjectile : MonoBehaviour
         direction = dir;
     }
 
-    public void DestroyProjectile(bool wasDestroyed)
+    public void DestroyProjectile(bool playSound)
     {
-        if(wasDestroyed)
+        if(playSound)
         {
             StartCoroutine(PlayDestructionSound());
         }

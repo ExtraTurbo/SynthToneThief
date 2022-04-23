@@ -81,7 +81,14 @@ public class Mushroom : MonoBehaviour
     {
         if(other.tag == gameObject.tag && (grown || growing))
         {
-            other.gameObject.SetActive(false);
+            if (other.gameObject.TryGetComponent<HazardProjectile>(out HazardProjectile projectile))
+            {
+                projectile.DestroyProjectile(true);
+            }
+            else
+            {
+                other.gameObject.SetActive(false);
+            }
         }
     }
 
