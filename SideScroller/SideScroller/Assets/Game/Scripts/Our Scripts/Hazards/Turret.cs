@@ -36,8 +36,13 @@ public class Turret : MonoBehaviour
     private GameObject player;
     private bool shooting;
 
+    [SerializeField]
+    private GameObject meshes;
+
     // Audio
     public AudioSource turretSource = null;
+    [SerializeField]
+    private AudioClip destroyClip;
 
 
     private void Start()
@@ -146,7 +151,30 @@ public class Turret : MonoBehaviour
     {
         if (other.CompareTag("GuitarProjectile") && destroyable == true && gameObject.CompareTag("RedTurret"))
         {
-            Destroy(gameObject);
+            if (other.gameObject.TryGetComponent<GuitarProjectile>(out GuitarProjectile projectile))
+            {
+                projectile.gameObject.SetActive(false);
+            }
+            else if (other.gameObject.transform.parent != null &&
+                     other.gameObject.transform.parent.TryGetComponent<GuitarProjectile>(out GuitarProjectile projectile2))
+            {
+                projectile2.gameObject.SetActive(false);
+            }
+            StartCoroutine(PlayDestroySound());
         }
+    }
+
+    private IEnumerator PlayDestroySound()
+    {
+        if (turretSource != null && destroyClip != null)
+        {
+            if (meshes != null)
+            {
+                meshes.SetActive(false);
+            }
+            turretSource.PlayOneShot(destroyClip, 1.0f);
+            yield return new WaitForSeconds(0.2f);
+        }
+        Destroy(gameObject);
     }
 }

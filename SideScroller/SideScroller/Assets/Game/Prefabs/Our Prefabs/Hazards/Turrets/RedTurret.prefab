@@ -475,7 +475,9 @@ MonoBehaviour:
   fireEffect: {fileID: 2885154734519967284}
   destroyable: 0
   undestroyableEffect: {fileID: 8925053018433911056}
+  meshes: {fileID: 4535171048332626559}
   turretSource: {fileID: 0}
+  destroyClip: {fileID: 8300000, guid: 1f9a12c34676e844a858293328501f1d, type: 3}
 --- !u!82 &2255099546892354807
 AudioSource:
   m_ObjectHideFlags: 0
@@ -801,6 +803,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eec718947f674843bf21299eeefee46, type: 3}
+--- !u!1 &4535171048332626559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2eec718947f674843bf21299eeefee46,
+    type: 3}
+  m_PrefabInstance: {fileID: 3616746586443200302}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3871963899170443461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2eec718947f674843bf21299eeefee46,
